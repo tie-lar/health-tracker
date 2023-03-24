@@ -1,0 +1,127 @@
+.ontrack__footer{
+    color: white;
+    font-family: var(--font-family);
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    padding: 5rem;
+}
+
+.footer-btm-text img{
+    width: 9em;
+}
+
+
+.footer-btm-text ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    gap: 50px;
+}
+
+.footer-btm-text p{
+    font-size: 14px;
+
+}
+
+.footer-btm-text{
+    border-top: white 1px solid;
+    padding-top: 1em;
+}
+
+.ontrack__footer-content{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 5rem;
+    color: rgb(255, 255, 255);
+    font-family: var(--font-family);
+}
+
+.ontrack__footer-content h1{
+    font-weight: 800;
+    font-size:70px;
+    line-height: 80px;
+    letter-spacing: -0.04em;
+}
+
+.ontrack__footer-content__input{
+    width:50%;
+    margin: 2rem 0 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-bottom: 1em;
+   
+}
+
+.ontrack__footer-content__input input {
+    flex:1;
+    width: 100%;
+    min-height: 50px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    border: 2px solid white;
+    padding: 0 1rem;
+    outline:none;
+    border-radius:5px ;
+}
+
+.ontrack__footer-content__input button{
+    flex: 0.25;
+    width: 100%;
+    min-height: 50px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    background: #72236A;
+    border: 2px solid #72236A;
+    padding: 0 1rem;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+}
+
+.ontrack__footer-content__input button:hover{
+    background-color: rgb(202, 20, 20);
+    border-color: rgb(202, 20, 20);
+    transition: 0.2s;
+}
+
+@media screen and (min-width: 1049px) {
+    
+}
+
+@media screen and (max-width: 1050px) {
+    .ontrack__header-image img{
+     
+    }
+
+    .ontrack__header-content h1{
+        
+      
+    }
+    
+    .ontrack__header-content p{
+       
+   
+    }
+
+}
+
+
+@media screen and (max-width: 700px) {
+
+}
+
+@media screen and (max-width: 550px) {
+   
+
+}

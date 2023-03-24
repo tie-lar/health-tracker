@@ -1,0 +1,71 @@
+.ontrack_tracker{
+    color: white;
+    font-family: var(--font-family);
+    font-size: 20px;
+    display: flex;
+    padding: 5rem;
+}
+
+.ontrack_tracker-content{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 5rem;
+    color: rgb(255, 255, 255);
+    font-family: var(--font-family);
+}
+
+.ontrack__tracker-image{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ontrack__tracker-feature img{
+    width: 100%;
+    height: 100%;
+}
+
+.ontrack__tracker-feature{
+    display: flex;
+    flex-direction: row;
+   gap: 10%;
+}
+
+.ontrack_tracker-content h1{
+    padding-bottom: 2rem;
+}
+
+@media screen and (min-width: 1049px) {
+    
+}
+
+@media screen and (max-width: 1050px) {
+    .ontrack__header-image img{
+     
+    }
+
+    .ontrack__header-content h1{
+        
+      
+    }
+    
+    .ontrack__header-content p{
+       
+   
+    }
+
+}
+
+
+@media screen and (max-width: 700px) {
+
+}
+
+@media screen and (max-width: 550px) {
+   
+
+}
