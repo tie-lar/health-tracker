@@ -1,90 +1,62 @@
-.ontrack__features{
-    color: white;
-    font-family: var(--font-family);
-    font-size: 20px;
-    display: flex;
-    flex-direction: row;
-    padding: 5rem;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+ 
+  list-style-type: none;
+  font-family: var(--font-family);
+  scroll-behavior: smooth;
+  color: white;
 }
 
-.button{
-    background-color: rgb(148, 78, 78);
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    justify-content: center;
-    border: solid 2px rgb(255, 255, 255);
-    
-  
+.features_main{
+  padding: 5rem;
+  align-items: center;
+ justify-content: center;
+ display: flex;
+
 }
 
-.circle_buttons{
-    display: flex;
-    flex-direction: row;
-    padding: 1rem;
-    gap: 20px;
-    
+.features_text{
+  max-width: 40rem;
+  padding: 2rem;
 }
 
-.button:hover{
-    background-color: rgb(86, 39, 39);
-    transition: 0.5s;
-}
 
-.ontrack__features-content{
-    flex:1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-right: 5rem;
+.features_slides{
   
 }
 
 
-.ontrack__features-image{
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.mySwiper {
+  width: 600px;
+  height: 300px;
+  overflow: visible;
+  transform: translateY(20%);
 }
 
-.ontrack__features-image img{
-    width: 100%;
-    height: 100%;
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+ 
 }
 
-@media screen and (min-width: 1049px) {
-    
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  transform: translateY(-10%);
+  border-radius: 0%;
+
+  
 }
 
-@media screen and (max-width: 1050px) {
-    .ontrack__header-image img{
-     
-    }
+.swiper-pagination-bullet{
 
-    .ontrack__header-content h1{
-        
-      
-    }
-    
-    .ontrack__header-content p{
-       
-   
-    }
-
+  transform: translateX(1100%) !important;
 }
 
-
-@media screen and (max-width: 700px) {
-
+.swiper-pagination1{
+  transform: translateX(50%) !important;
 }
-
-@media screen and (max-width: 550px) {
-   
-
-}
-
-
-
 

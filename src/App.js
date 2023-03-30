@@ -1,5 +1,5 @@
 import React from 'react';
-import {Navbar, Usergroups} from './components';
+import {Navbar, Usergroups, Test} from './components';
 import {Header, Features, Footer, Tracker} from './containers';
 import './App.css';
 
@@ -10,9 +10,11 @@ const App = () => {
                 <Navbar />
                 <Header />
             </div>
-           <Features />
+       
+            <Features />
            <Usergroups />
            <Tracker />
+           
             <Footer />
            
         </div>

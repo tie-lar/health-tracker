@@ -1,5 +1,5 @@
 import React from 'react';
-import feature from '../../assets/feature.png';
+import feature from '../../assets/runner_4.png';
 import './header.css';
 
 const Header = () => {
