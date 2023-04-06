@@ -4,8 +4,7 @@ const messageForm = document.getElementById('send-container')
 const messageInput = document.getElementById('message-input')
 const disconnectButton = document.getElementById('disconnect-button')
 
-const name = prompt('What is your name?')
-appendMessage('You joined')
+const name = 'Help Bot'
 socket.emit('new-user', name)
 
 socket.on('chat-message', data => {
@@ -31,7 +30,6 @@ messageForm.addEventListener('submit', e => {
 disconnectButton.addEventListener('click', e => {
     e.preventDefault()
     socket.disconnect()
-    appendMessage(`You have disconnected`)
 })
 
 function appendMessage(message) {
