@@ -9,32 +9,32 @@ appendMessage('You joined')
 socket.emit('new-user', name)
 
 socket.on('chat-message', data => {
-  appendMessage(`${data.name}: ${data.message}`)
+    appendMessage(`${data.name}: ${data.message}`)
 })
 
 socket.on('user-connected', name => {
-  appendMessage(`${name} connected`)
+    appendMessage(`${name} connected`)
 })
 
 socket.on('user-disconnected', name => {
-  appendMessage(`${name} disconnected`)
+    appendMessage(`${name} disconnected`)
 })
 
 messageForm.addEventListener('submit', e => {
-  e.preventDefault()
-  const message = messageInput.value
-  appendMessage(`You: ${message}`)
-  socket.emit('send-chat-message', message)
-  messageInput.value = ''
+    e.preventDefault()
+    const message = messageInput.value
+    appendMessage(`You: ${message}`)
+    socket.emit('send-chat-message', message)
+    messageInput.value = ''
 })
 
 disconnectButton.addEventListener('click', e => {
-  e.preventDefault()
-  socket.disconnect()
+    e.preventDefault()
+    socket.disconnect()
 })
 
 function appendMessage(message) {
-  const messageElement = document.createElement('div')
-  messageElement.innerText = message
-  messageContainer.append(messageElement)
+    const messageElement = document.createElement('div')
+    messageElement.innerText = message
+    messageContainer.append(messageElement)
 }
