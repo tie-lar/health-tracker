@@ -1,0 +1,74 @@
+.account_header {
+    display: flex;
+    flex-direction: row;
+}
+
+.account_header_left {
+    flex: 1 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 5rem;
+}
+
+.account_header_right {
+    flex: 1 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.account_header_right button {
+    min-width: 120px;
+}
+
+.default_font {
+    color: white;
+    font-family: var(--font-family);
+}
+
+.account_image {
+    flex: 1 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.account_image img {
+    width: auto;
+    height: 150px;
+}
+
+.default_button {
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background: #72236A;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 25px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.account_stats_group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.account_stats_group button{
+    margin: 5px;
+}
+
+.margin_bottom_20 {
+    margin-bottom: 20px;
+}
+
+.account_header_right h3{
+
+}
