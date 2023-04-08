@@ -1,0 +1,67 @@
+
+
+.edit_account_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit_account_form label input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+}
+
+.center_padding {
+    padding: 0px 200px;
+}
+
+.edit_account_form button{
+    background-color: #8884d8;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 85px;
+
+}
+
+.edit_account_other{
+      display: flex;
+      margin-top: 70px;
+      justify-content: flex-end;
+
+}
+
+.edit_account_other a {
+    width: 85px;
+  text-align: center;
+
+}
+
+.edit_account_form_btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.weight_toggle {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.weight_toggle button {
+    width: 49%;
+    margin: 0px 0px;
+}
+
+.caution_button {
+    color: red;
+}

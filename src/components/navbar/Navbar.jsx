@@ -23,7 +23,7 @@ const Menu = () => (
 
   const Menu2 = () => (
     <>
-    <p><a href="#home">Home</a></p>
+    <p><Link to="/home">Home</Link></p>
     <p><a href="#wontrack">What is ontrack?</a></p>
     <p><a href="#features">Features</a></p>
     <p><a href="#tutorial">Tutorial</a></p>

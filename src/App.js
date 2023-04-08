@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
-import { Layout, Home, Error, Account } from "./pages";
+import { Layout, Home, Error, Account, EditAccount, TestPage } from "./pages";
 
 import './App.css';
 
@@ -14,6 +14,8 @@ const App = () => {
               <Route path="/home" element={<Home />} />
               <Route path="*" element={<Error />} />
               <Route path="/account" element={<Account />} />
+              <Route path="/account/edit" element={<EditAccount />} />
+              <Route path="/test" element={<TestPage />} />
             </Route>
           </Routes>
         </BrowserRouter>

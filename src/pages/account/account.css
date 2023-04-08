@@ -1,6 +1,7 @@
 .account_header {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .account_header_left {
@@ -38,7 +39,7 @@
 
 .account_image img {
     width: auto;
-    height: 150px;
+    height: 200px;
 }
 
 .default_button {
@@ -71,4 +72,16 @@
 
 .account_header_right h3{
 
+}
+
+.account_stats_group li {
+    list-style-type: none;
+    background-color: #72236A;
+    padding: 13px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    min-width: 196px;
+    border-radius: 5px;
 }

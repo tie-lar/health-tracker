@@ -1,6 +1,10 @@
 import './account.css';
 import feature from '../../assets/feature.png';
 import circle from '../../assets/circle.png';
+import { Header, Footer, Tracker, Features  } from '../../containers';
+import { Chart } from '../../components';
+import { Outlet, Link } from "react-router-dom";
+
 
 const Account = () => {
   return (
@@ -13,28 +17,49 @@ const Account = () => {
             </div>
           </div>
           <div className='account_header_right'>
-            <button type='button' className='default_button'>Edit Account</button>
+            <Link to="/account/edit" className='default_button'>Edit Account</Link>
             <button type='button' className='default_button'>History</button>
           </div>
       </div>
       <div className='section__padding account_header default_font'>
           <div className='account_header_left'>
-            <div className='temp_graph'>
-              <img src={feature} alt="" />
-            </div>
+              <Chart />
           </div>
           <div className='account_header_right'>
-            <h3>Since You Started Your Journey</h3>
-            <div className='account_stats_group'>
-                <button type='button' className='default_button'>Edit Account</button>
-                <button type='button' className='default_button'>History</button>
-                <button type='button' className='default_button'>Edit Account</button>
-                <button type='button' className='default_button'>History</button>
-                <button type='button' className='default_button'>Edit Account</button>
-                <button type='button' className='default_button'>History</button>
-            </div>
+            <h2>Since You Started Your Journey</h2>
+            <ul className='account_stats_group'>
+                <li className='stat_group'>
+                    <h4>Calories Burnt</h4>
+                    <p>23,567</p>
+                </li>
+                <li className='stat_group'>
+                    <h4>Weight lost</h4>
+                    <p>3.78 kg</p>
+                </li>
+                <li className='stat_group'>
+                    <h4>Exercises Completed</h4>
+                    <p>56</p>
+                </li>
+                <li className='stat_group'>
+                    <h4>Healthy Meals cooked</h4>
+                    <p>25</p>
+                </li>
+                <li className='stat_group'>
+                    <h4>Distance Covered</h4>
+                    <p>179 Miles</p>
+                </li>
+                <li className='stat_group'>
+                    <h4>Steps Taken</h4>
+                    <p>150,673</p>
+                </li>
+                <li className='stat_group'>
+                    <h4>People inspired</h4>
+                    <p>14</p>
+                </li>
+            </ul>
           </div>
       </div>
+      <Tracker />
     </>
   )
 };

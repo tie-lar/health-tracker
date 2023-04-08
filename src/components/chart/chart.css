@@ -1,0 +1,29 @@
+.chart_menu {
+    display: flex;
+    margin-top:  20px;
+}
+
+.chart_menu button{
+    margin: 2px;
+}
+
+.default_button:hover{
+    background-color: rgb(202, 20, 20);
+}
+
+.chart_menu button {
+  padding: 0.5rem 1rem;
+  color: #fff;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.baby_blue {
+    background-color: #8884d8;
+}

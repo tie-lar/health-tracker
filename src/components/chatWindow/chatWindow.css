@@ -1,0 +1,10 @@
+.chatWindow_element {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 320px;
+}
+
+.react-chatbot-kit-chat-inner-container {
+    width: 320px;
+}
