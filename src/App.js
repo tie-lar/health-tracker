@@ -1,6 +1,5 @@
 import React from 'react';
-import { Signup} from './components';
-import { Test} from './components';
+import { Signup, Login, Dashboard} from './components';
 import './App.css';
 
 const App = () => {
@@ -8,11 +7,15 @@ const App = () => {
       <div className='App'> 
           <div className='gradient__bg'>
               
-              <Test />
+              <Signup/>
+              
+             
           </div>
 
       </div>
   )
 }
 
-export default App
+export default App;
+ //<Signup />
+ //<Login />
