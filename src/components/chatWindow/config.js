@@ -1,4 +1,5 @@
 import { createChatBotMessage } from 'react-chatbot-kit';
+import BotProfilePicture from './BotProfilePicture';
 
 const botName = 'OntrackBot';
 
@@ -7,6 +8,10 @@ const config = {
   customStyles: {
     botMessageBox: { backgroundColor: 'purple', },
     chatButton: { backgroundColor: 'purple', },
+  },
+  
+  customComponents: {
+    botAvatar: (props) => <BotProfilePicture {...props} />
   },
   
   initialMessages: [
