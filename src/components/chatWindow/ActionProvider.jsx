@@ -41,6 +41,14 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     }
     
     
+    const handleCalorieTracking = () => {
+        const message = createChatBotMessage(
+            'YET TO BE IMPLEMENTED - TELL DIRLEY TO WORK HARDER.'
+        )
+        botMessage(message);
+    }
+    
+    
     const handleOther = () => {
         const message = createChatBotMessage(
             "Sorry, I didn't catch that. Would you mind rephrasing?"
@@ -67,6 +75,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
                     actions: {
                         handleLogin,
                         handleSignup,
+                        handleCalorieTracking,
                         handleOther
                     },
                 });

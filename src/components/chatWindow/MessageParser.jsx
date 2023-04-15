@@ -9,6 +9,10 @@ const MessageParser = ({ children, actions }) => {
                  message.toLowerCase().includes('signup')) {
             actions.handleSignup();
         }
+        else if (message.toLowerCase().includes('track') &&
+                 message.toLowerCase().includes('calories')) {
+            actions.handleCalorieTracking();
+        }
         else {
             actions.handleOther();
         }
