@@ -21,3 +21,23 @@
     color: white;
     margin-right: 15px;    
 }
+
+.help-options-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: right;
+  flex-wrap: wrap;
+}
+
+.help-button {
+  padding: 0.5rem;
+  border-radius: 25px;
+  background: transparent;
+  border: 1px solid purple;
+  margin: 3px;
+}
+
+.help-button:hover {
+  background-color: Plum;
+  transition: 0.2s;
+}

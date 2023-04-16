@@ -13,6 +13,10 @@ const MessageParser = ({ children, actions }) => {
                  message.toLowerCase().includes('calories')) {
             actions.handleCalorieTracking();
         }
+        else if (message.toLowerCase().includes('real') &&
+                 message.toLowerCase().includes('person')) {
+            actions.handleRealPerson();
+        }
         else {
             actions.handleOther();
         }

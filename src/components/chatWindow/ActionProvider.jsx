@@ -20,7 +20,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
         ];
         messageArr.forEach(botMessage);
         solvedQuery();
-    };
+    }
     
     
     const handleSignup = () => {
@@ -44,21 +44,44 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     const handleCalorieTracking = () => {
         const message = createChatBotMessage(
             'YET TO BE IMPLEMENTED - TELL DIRLEY TO WORK HARDER.'
-        )
+        );
         botMessage(message);
     }
     
     
     const handleOther = () => {
         const message = createChatBotMessage(
-            "Sorry, I didn't catch that. Would you mind rephrasing?"
+            `Sorry, I didn't catch that. Would you mind rephrasing?`
+        );
+        botMessage(message);
+    }
+    
+    
+    const handleRealPerson = () => {
+        const message = createChatBotMessage(`Connecting you to a real person...
+            (not really I haven't done it yet)`
         );
         botMessage(message);
     }
     
     
     const solvedQuery = () => {
-        const message = createChatBotMessage('Has this solved your query?');
+        const message = createChatBotMessage('Has this solved your query?', {
+            widget: 'helpOptions',
+        });
+        botMessage(message);
+    }
+    const handleNo = () => {
+        const message = createChatBotMessage(
+            `I'm sorry to hear that. If you would like me to connect you to a
+            real person, just say 'Connect me to a real person'.`
+        );
+        botMessage(message);
+    }
+    const handleYes = () => {
+        const message = createChatBotMessage(
+            `Great! Message me again if you need any future support.`
+        );
         botMessage(message);
     }
     
@@ -76,7 +99,10 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
                         handleLogin,
                         handleSignup,
                         handleCalorieTracking,
-                        handleOther
+                        handleOther,
+                        handleRealPerson,
+                        handleYes,
+                        handleNo
                     },
                 });
             })}
