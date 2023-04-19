@@ -12,7 +12,6 @@ function AccountForm() {
   const [password, setPassword] = useState('passwordChange');
   const [calorieTarget, setCalorieTarget] = useState('3000');
   const [gainActive, setGainActive] = useState(true);
-  //const [isLossActive, setIsLossActive] = useState(false);
 
   const usernameChange = (event) => {
       setUsername(event.target.value);
@@ -95,7 +94,7 @@ function AccountForm() {
 }
 
 
-const Account = () => {
+const EditAccount = () => {
   return (
     <>
       <div className='gradient__bg section__padding account_header default_font'>
@@ -120,4 +119,4 @@ const Account = () => {
   )
 };
 
-export default Account;
+export default EditAccount;

@@ -1,40 +1,39 @@
-.ontrack__navbar {
+.home__navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  
     padding: 1em 2em;
 }
 
-.ontrack__navbar-links{
+.home_navbar-links{
     flex: 1;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
  
-.ontrack__navbar-links_logo{
+.home_navbar-links-logo{
     margin-right: 1rem;
 }
 
 
-.ontrack__navbar-links_logo img{
+.home_navbar-links-logo img{
     width: 8em;
 }
 
-.ontrack__navbar-links_container{
+.home_navbar-links-container{
     display: flex;
     flex-direction: row;
 }
 
-.ontrack__navbar-sign{
+.home_navbar-sign{
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
-.ontrack__navbar-links_container p,
-.ontrack__navbar-sign p{
+.home_navbar-links-container p,
+.home_navbar-sign p{
     color: #fff;
     font-family: var(--font-family);
     font-weight: 500;
@@ -46,7 +45,7 @@
     cursor: pointer;
 }
 
-.ontrack__navbar-sign button{
+.home_navbar-sign button{
     padding: 0.5rem 1rem;
     color: #fff;
     background: #72236A;
@@ -60,17 +59,17 @@
     border-radius: 5px;
 }
 
-.ontrack__navbar-menu{
+.home_navbar-menu{
     margin-left: 1rem;
     display: none;
     position: relative;
 }
 
-.ontrack__navbar-menu svg {
+.home_navbar-menu svg {
     cursor: pointer;
 }
 
-.ontrack__navbar-menu_container{
+.home_navbar-menu-container{
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
@@ -90,26 +89,32 @@
 
 }
 
-.ontrack__navbar-menu_container p{
+.home_navbar-menu-container p{
     margin: 1rem 0;
 }
 
-.ontrack__navbar-menu_container-links-sign{
+.home_navbar-menu-container-links-sign{
     display: none;
 }
 
-.ontrack__navbar-menu_container-links p:hover{
+.home_navbar-menu-container-links p:hover{
     color: rgb(202, 20, 20);
     transition: 0.2s;
 }
 
-.ontrack__navbar p:hover{
+
+.home_navbar p:hover{
     color: rgb(202, 20, 20);
     transition: 0.2s;
 }
 
-.ontrack__navbar button:hover{
+.home_navbar button:hover{
     background-color: rgb(202, 20, 20);
+}
+
+.home_navbar-sign button:hover{
+    background-color: rgb(202, 20, 20);
+    transition: 0.2s;
 }
 
 .toggle_menu{
@@ -123,11 +128,11 @@
 }
 
 @media screen and (max-width: 1050px) {
-    .ontrack__navbar-links_container{
+    .home_navbar-links-container{
         display:none;
     }
 
-    .ontrack__navbar-sign{
+    .home_navbar-sign{
         display: none;
     }
 
@@ -136,22 +141,22 @@
 
 
 @media screen and (max-width: 700px) {
-    .ontrack__navbar{
+    .home_navbar{
         padding: 1rem 2rem;
     }
 
-    .ontrack__navbar-sign{
+    .home_navbar-sign{
         display: none;
     }
 
 }
 
 @media screen and (max-width: 550px) {
-    .ontrack__navbar{
+    .home_navbar{
         padding: 1rem;
     }
 
-    .ontrack__navbar-sign{
+    .home_navbar-sign{
         display: none;
     }
 

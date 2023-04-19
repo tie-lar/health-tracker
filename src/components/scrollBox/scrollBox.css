@@ -1,0 +1,30 @@
+.scroll_section {
+    width:48%;
+    height:350px;
+    line-height:3em;
+    overflow:auto;
+    padding:5px;
+
+}
+
+.scroll_element {
+    background: green;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 4px;
+    background-color: #72236A;
+    border-radius: 5px;
+
+}
+
+.scroll_element_left {
+    font-weight: bold;
+    padding-left: 10px;
+
+}
+
+.scroll_element_right {
+    width: 50px;
+    text-align: left;
+}

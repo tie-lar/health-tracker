@@ -19,6 +19,31 @@ body {
     background-color: #72236A;
 }
 
+/* Scrollbar styling */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* --------------------------  */
+
+
 .gradient__bg {
   background:-moz-radial-gradient(circle at 3% 70%, rgb(67, 26, 63) 0%, rgb(41, 0, 37) 35%);
 

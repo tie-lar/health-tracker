@@ -18,7 +18,7 @@ const Account = () => {
           </div>
           <div className='account_header_right'>
             <Link to="/account/edit" className='default_button'>Edit Account</Link>
-            <button type='button' className='default_button'>History</button>
+            <Link to="/history" className='default_button'>History</Link>
           </div>
       </div>
       <div className='section__padding account_header default_font'>

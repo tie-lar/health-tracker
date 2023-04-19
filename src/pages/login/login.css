@@ -1,0 +1,142 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    
+}
+
+.login_container{
+    display: flex;
+    height: 40rem;
+    width: 80rem;
+    border: 2px solid black;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.login_container p{
+    color: #000000;
+}
+
+.login_container b{
+    color: #000000;
+}
+
+.login_form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    background: white;
+
+}
+
+.login_form input{
+    color: black;
+}
+
+.login_box{
+    padding: 12px;
+    width: 60%;
+    margin: 8px;
+    outline: none;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #000000;
+}
+
+.login_side{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.login_side img{
+    width: 95%;
+    height: 95%;
+    margin: 2rem;
+    border-top-left-radius: 2%;
+    border-bottom-right-radius: 2%;
+}
+
+.google{
+    width: 15px;
+    transform: translateX(-60%);
+}
+
+.account{
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 2px;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+.account:hover{
+    background-color: rgb(112, 112, 112);;
+    color: white;
+    border: 2px solid rgb(112, 112, 112);;
+}
+
+.sign_google{
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 2px;
+    background-color: white;
+    color: #000000;
+   
+    
+}
+
+.sign_google:hover{
+    background-color: rgb(112, 112, 112);
+    color: white;
+    border-color: rgb(112, 112, 112);;
+}
+
+
+.login_form button{
+    display: flex;
+    margin: 0.5em;
+    padding: 12px;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.login_form p{
+    font-size: 14px;
+}
+
+.login_form input{
+    display: flex;
+    flex-direction: column; 
+    margin: 1rem;
+    padding: 2px;
+}
+
+.login_form h1{
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: 80px;
+    color: #000000;
+}
+
+
+
+
+.login_logo{
+   
+    width: 100px;
+    transform: translate(-90%, 80%);
+}

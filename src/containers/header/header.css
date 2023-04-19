@@ -1,9 +1,14 @@
-.ontrack__header{
+.header_container{
     display: flex;
     flex-direction: row;
 }
 
-.ontrack__header-content{
+.header_container input{
+    color: black;
+}
+
+
+.header_content{
     flex:1;
     display: flex;
     justify-content: center;
@@ -15,7 +20,7 @@
 }
 
 
-.ontrack__header-content h1{
+.header_content h1{
     font-weight: 800;
     font-size:70px;
     line-height: 80px;
@@ -23,20 +28,20 @@
   
 }
 
-.ontrack__header-content p{
+.header_content p{
     font-size: 20px;
     line-height: 28px;
     margin-top: 1.5rem;
 }
 
-.ontrack__header-content__input{
+.header-content-input{
     width:100%;
     margin: 2rem 0 1rem;
     display: flex;
     flex-direction: row;
 }
 
-.ontrack__header-content__input input{
+.header-content-input input{
     flex:1.75;
     width: 100%;
     min-height: 50px;
@@ -51,7 +56,7 @@
     border-bottom-left-radius: 5px;
 }
 
-.ontrack__header-content__input button{
+.header-content-input button{
     flex: 0.8;
     width: 100%;
     min-height: 50px;
@@ -70,7 +75,7 @@
     border-bottom-right-radius: 5px;
 }
 
-.ontrack__header-image{
+.header-image{
     flex: 1;
     display: flex;
     justify-content: center;
@@ -82,41 +87,41 @@
     height: 80%;
 }
 
-.ontrack__header-content__input button:hover{
+.header-content-input button:hover{
     background-color: rgb(202, 20, 20);
     border-color: rgb(202, 20, 20);
     transition: 0.2s;
 }
 
 @media screen and (max-width: 1453px){
-    .ontrack__header-content__input{
+    .header-content-input{
         width: 90%;
     }
 
-    .ontrack__header-content__input input{
+    .header-content-input input{
         font-size: 12px;
         line-height: 26px;
 
     }
 
-    .ontrack__header-content__input button{
+    .header-content-input button{
         font-size: 12px;
         line-height: 26px;
     }
 
   
 
-    .ontrack__header-image img{
+    .header-image img{
         width: 70%;
         height: 70%;
     }
 
     
-    .ontrack__header-content h1{
+    .header_content h1{
         font-size:65px;
     }
     
-    .ontrack__header-content p{
+    .header_content p{
         font-size: 18px;
    
     }
@@ -124,25 +129,25 @@
 }
 
 @media screen and (max-width: 1417px){
-    .ontrack__header-content__input{
+    .header-content-input{
         width: 80%;
     }
 
-    .ontrack__header-content__input input{
+    .header-content-input input{
         font-size: 10px;
         line-height: 24px;
     }
 
-    .ontrack__header-content__input button{
+    .header-content-input button{
         font-size: 10px;
         line-height: 24px;
     }
 
-    .ontrack__header-content h1{
+    .header_content h1{
         font-size:60px;
     }
     
-    .ontrack__header-content p{
+    .header_content p{
         font-size: 16px;
    
     }
@@ -151,15 +156,15 @@
 
 @media screen and (max-width: 1375px) {
 
-    .ontrack__header-content h1{
+    .header_content h1{
         font-size:50px;
     }
     
-    .ontrack__header-content p{
+    .header_content p{
         font-size: 14px;
     }
 
-    .ontrack__header-image img{
+    .header-image img{
         width: 65%;
         height: 65%;
     }
@@ -168,22 +173,22 @@
 
 
 @media screen and (max-width: 1207px) {
-    .ontrack__header-image img{
+    .header-image img{
         width: 60%;
         height: 60%;
     }
 
     
-    .ontrack__header-content h1{
+    .header_content h1{
         font-size:40px;
     }
     
-    .ontrack__header-content p{
+    .header_content p{
         font-size: 12px;
    
     }
 
-    .ontrack__header-content__input{
+    .header-content-input{
         width: 80%;
 
     }
@@ -193,41 +198,41 @@
 }
 
 @media screen and (max-width: 1050px) {
-    .ontrack__header {
+    .header_container {
         flex-direction: column;
     }
 
-    .ontrack__header-content {
+    .header_content {
         margin: 0 0 3rem;
         justify-content: center;
         align-items: center;
     }
 
-    .ontrack__header-content__input{
+    .header-content-input{
         width: 90%;
     }
 
-    .ontrack__header-content__input input{
+    .header-content-input input{
         font-size: 14px;
         line-height: 26px;
     }
 
-    .ontrack__header-content__input button{
+    .header-content-input button{
         font-size: 14px;
         line-height: 26px;
     }
     
     
-    .ontrack__header-image img{
+    .header-image img{
         width: 50%;
         height: 50%;
     }
 
-    .ontrack__header-content h1{
+    .header_content h1{
         font-size:50px;
     }
     
-    .ontrack__header-content p{
+    .header_content p{
         font-size: 16px;
     
     }
@@ -237,52 +242,52 @@
 
 @media screen and (max-width: 867px) {
 
-    .ontrack__header-content h1{
+    .header_content h1{
         font-size:40px;
     }
 
-    .ontrack__header-content p{
+    .header_content p{
         font-size: 14px;
     }
 
-    .ontrack__header-content__input{
+    .header-content-input{
         width: 90%;
     }
 
-    .ontrack__header-content__input input{
+    .header-content-input input{
         font-size: 12px;
         line-height: 24px;
     }
 
-    .ontrack__header-content__input button{
+    .header-content-input button{
         font-size: 12px;
         line-height: 24px;
     }
 
 }
 
-@media screen and (max-width: 731px) {
-    .ontrack__header-content h1{
+@media screen and (max-width: 732px) {
+    .header_content h1{
         font-size:35px;
     }
 
-    .ontrack__header-content p{
+    .header_content p{
         font-size: 12px;
     }
 }
 
 @media screen and (max-width: 600px) {
    
-    .ontrack__header-content h1{
+    .header_content h1{
         font-size:30px;
     }
 
-    .ontrack__header-content__input input{
+    .header-content-input input{
         font-size: 10px;
 
     }
 
-    .ontrack__header-content__input button{
+    .header-content-input button{
         font-size: 10px;
     
     }
@@ -290,16 +295,16 @@
 }
 
 @media screen and (max-width: 550px){
-    .ontrack__header-content h1{
+    .header_content h1{
         font-size:25px;
     }
 
-    .ontrack__header-content p{
+    .header_content p{
         padding-left: 2rem;
         padding-right: 2rem;
     }
 
-    .ontrack__header-content__input{
+    .header-content-input{
         padding-left: 2rem;
         padding-right: 2rem;
     }

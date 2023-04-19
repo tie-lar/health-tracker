@@ -15,20 +15,22 @@ import logo from '../../assets/logo.png';
 const Menu = () => (
     <>
     <p><Link to="/home">Home</Link></p>
-    <p><a href="#wontrack">What is ontrack?</a></p>
-    <p><a href="#features">Features</a></p>
-    <p><a href="#tutorial">Tutorial</a></p>
+    <p><Link to="/dashboard">Dashboard</Link></p>
+    <p><Link to="/error">Error</Link></p>
+    <p><Link to="/wontrack">What is ontrack?</Link></p>
+    <p><Link to="/features">Features</Link></p>
+    <p><Link to="/tutorial">Tutorial</Link></p>
     </>
   )
 
   const Menu2 = () => (
     <>
     <p><Link to="/home">Home</Link></p>
-    <p><a href="#wontrack">What is ontrack?</a></p>
-    <p><a href="#features">Features</a></p>
-    <p><a href="#tutorial">Tutorial</a></p>
-    <p><a href="login">Login</a></p>
-    <p><a href="signup">Sign Up</a></p>
+    <p><Link to="/wontrack">What is ontrack?</Link></p>
+    <p><Link to="/features">Features</Link></p>
+    <p><Link to="/tutorial">Tutorial</Link></p>
+    <p><Link to="/login">Login</Link></p>
+    <p><Link to="/signup">Signup</Link></p>
     </>
   )
 
@@ -36,18 +38,18 @@ const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
   return (
-    <div className='ontrack__navbar'>
-            <div className='ontrack__navbar-links'>
-                <div className='ontrack__navbar-links_logo'>
+    <div className='home__navbar'>
+            <div className='home_navbar-links'>
+                <div className='home_navbar-links-logo'>
                     <img src={logo} alt="logo" />
                 </div>
-                <div className='ontrack__navbar-links_container'>
+                <div className='home_navbar-links-container'>
                     <Menu />
                 </div>
             </div>
-            <div className='ontrack__navbar-sign'>
-                <p><a href="#login">Login</a></p>
-                <button type="button">Sign Up</button>
+            <div className='home_navbar-sign'>
+              <p><Link to="/login">Login</Link></p>
+                <button type="button"> <Link to="/signup">Signup</Link></button>
             </div>
 
             {/*Hamburger menu=true meaning the default view would be seeing the three lines, when clicked, it'll change to the cross icon*/}
@@ -56,10 +58,10 @@ const Navbar = () => {
           : <GiHamburgerMenu color="#fff" size={27} onClick={() => setToggleMenu(true)} />}
             {/*If the menu is toggled then...*/}
             {toggleMenu && (
-                <div className='ontrack__navbar-menu_container scale-up-center'>
-                    <div className='ontrack__navbar-menu_container-links'>
+                <div className='home_navbar-menu-container scale-up-center'>
+                    <div className='home_navbar-menu-container-links'>
                         <Menu2 />
-                        <div className='ontrack__navbar-menu_container-links-sign'>
+                        <div className='home_navbar-menu-container-links-sign'>
                             <p><a href="#login">Login</a></p>
                             <button type="button">Sign Up</button>
                         </div>
@@ -72,3 +74,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+

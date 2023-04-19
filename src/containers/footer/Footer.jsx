@@ -1,26 +1,27 @@
 import React from 'react';
+import { Outlet, Link } from "react-router-dom";
 import './footer.css';
 
 const Footer = () => {
     return (
-        <div className='ontrack__footer'>
-            <div className='ontrack__footer-content'>
+        <div className='footer_container'>
+            <div className='footer-content'>
                 <div className='footer-text'>
                     <h2>Begin your fitness journey</h2>
                 </div>
-                <div className='ontrack__footer-content__input'>
+                <div className='footer-content-input'>
                     <input type="email" placeholder='Your email address'/>
-                    <button type='button'>Sign Up</button>
+                    <button type='button'><Link to="/signup">Sign Up</Link></button>
                 </div>
                 <div className='footer-btm-text'>
                     <ul>
-                        <li>Product</li>
-                        <li>Features</li>
-                        <li>Resources</li>
+                        <li><Link to="/product">Product</Link></li>
+                        <li><Link to="/features">Features</Link></li>
+                        <li><Link to="/resources">Resources</Link></li>
                         <li>© Team106 2023</li>
-                        <li>About</li>
-                        <li>Blog</li>
-                        <li>Support</li>
+                        <li><Link to="/about">About</Link></li>
+                        <li><Link to="/blog">Blog</Link></li>
+                        <li><Link to="/support">Support</Link></li>
                     </ul>
                 </div>
             </div>

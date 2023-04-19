@@ -24,7 +24,7 @@ const Layout = () => {
       </div>
       <div className='chatBot'>
         <button className="chat_button default_button" onClick={toggleChat}
-        style={{ marginBottom: showChat ? 500 : 0 }}>Chat</button>
+        style={{ marginBottom: showChat ? 500 : 0 }}>Help</button>
         {showChat && <ChatWindow />}
       </div>
       <Outlet />

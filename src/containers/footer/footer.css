@@ -1,4 +1,4 @@
-.ontrack__footer{
+.footer_container{
     color: white;
     font-family: var(--font-family);
     font-size: 20px;
@@ -9,6 +9,10 @@
 
 .footer-btm-text img{
     width: 9em;
+}
+
+.footer-content-input input{
+    color: black;
 }
 
 
@@ -30,7 +34,7 @@
     padding-top: 1em;
 }
 
-.ontrack__footer-content{
+.footer-content{
     flex:1;
     display: flex;
     justify-content: center;
@@ -41,14 +45,14 @@
     font-family: var(--font-family);
 }
 
-.ontrack__footer-content h1{
+.footer-content h1{
     font-weight: 800;
     font-size:70px;
     line-height: 80px;
     letter-spacing: -0.04em;
 }
 
-.ontrack__footer-content__input{
+.footer-content-input{
     width:50%;
     margin: 2rem 0 1rem;
     display: flex;
@@ -58,7 +62,7 @@
    
 }
 
-.ontrack__footer-content__input input {
+.footer-content-input input {
     flex:1;
     width: 100%;
     min-height: 50px;
@@ -72,7 +76,7 @@
     border-radius:5px ;
 }
 
-.ontrack__footer-content__input button{
+.footer-content-input button{
     flex: 0.25;
     width: 100%;
     min-height: 50px;
@@ -89,7 +93,7 @@
     border-radius: 5px;
 }
 
-.ontrack__footer-content__input button:hover{
+.footer-content-input button:hover{
     background-color: rgb(202, 20, 20);
     border-color: rgb(202, 20, 20);
     transition: 0.2s;
@@ -100,19 +104,7 @@
 }
 
 @media screen and (max-width: 1050px) {
-    .ontrack__header-image img{
-     
-    }
-
-    .ontrack__header-content h1{
-        
-      
-    }
-    
-    .ontrack__header-content p{
-       
-   
-    }
+ 
 
 }
 

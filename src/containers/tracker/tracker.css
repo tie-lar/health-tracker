@@ -1,4 +1,4 @@
-.ontrack_tracker{
+.tracker_container{
     color: white;
     font-family: var(--font-family);
     font-size: 20px;
@@ -6,7 +6,7 @@
     padding: 5rem;
 }
 
-.ontrack_tracker-content{
+.tracker-content{
     flex:1;
     display: flex;
     justify-content: center;
@@ -17,25 +17,25 @@
     font-family: var(--font-family);
 }
 
-.ontrack__tracker-image{
+.tracker-image{
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.ontrack__tracker-feature img{
-    width: 100%;
+.tracker-feature img{
+    width: 50%;
     height: 100%;
 }
 
-.ontrack__tracker-feature{
+.tracker-feature{
     display: flex;
     flex-direction: row;
    gap: 10%;
 }
 
-.ontrack_tracker-content h1{
+.tracker-content h1{
     padding-bottom: 2rem;
 }
 
@@ -44,19 +44,7 @@
 }
 
 @media screen and (max-width: 1050px) {
-    .ontrack__header-image img{
-     
-    }
-
-    .ontrack__header-content h1{
-        
-      
-    }
-    
-    .ontrack__header-content p{
-       
-   
-    }
+ 
 
 }
 

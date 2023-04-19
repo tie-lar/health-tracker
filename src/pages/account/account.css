@@ -21,8 +21,9 @@
     flex-direction: column;
 }
 
-.account_header_right button {
+.account_header_right a {
     min-width: 120px;
+    text-align: center;
 }
 
 .default_font {

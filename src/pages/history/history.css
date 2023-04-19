@@ -1,0 +1,28 @@
+.history_header {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 5rem;
+}
+
+.two_scroll_boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.back_button_section {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 7%;
+
+}
+
+.back_button_section a{
+    min-width: 100px;
+    text-align: center;
+
+}

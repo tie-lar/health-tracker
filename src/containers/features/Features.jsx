@@ -1,51 +1,65 @@
 import React, {useState} from 'react';
-import feature from '../../assets/feature.png';
+import feature from '../../assets/test_image_5.jpg';
+//import {BsCircleFill, BsCircle} from "react-icons/bs";
 import './features.css';
 
+import {Pagination, EffectCube } from 'swiper';
+import {Swiper, SwiperSlide} from 'swiper/react';
+
+import image1 from '../../assets/test_image.jpg';
+import image2 from '../../assets/test_image_2.jpg';
+import image3 from '../../assets/test_image_3.jpg';
+
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/effect-cube';
+
 const Features = () => {
-    const [currentIdx, setCurrentIdx] = useState(0);
-    const goToPrev = () => {
-        const isFirstSlide = currentIdx === 0;
-        const newIdx = isFirstSlide ? slides.length - 1 : currentIdx -1;
-        setCurrentIdx(newIdx);
-    };
-
-    const goToNext = () => {
-        const isLastSlide = currentIdx === slides.length - 1;
-        const newIdx = isLastSlide ? 0 : currentIdx + 1;
-        setCurrentIdx(newIdx);
-    };
-
-    const goToSlide = (slideIdx) => {
-        setCurrentIdx(slideIdx);
-    }
-
-    const slides = [
-        {}
-    ]
-
-
 
   return (
-    <div className='ontrack__features'>
-      <div className='ontrack__features-content'>
-        <h1 className='features_text'>
-            Heading
-        </h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente eveniet nisi aspernatur amet reiciendis repudiandae ex ea earum molestiae omnis labore ipsam ad aperiam accusamus, similique debitis fuga totam nihil?</p>
-        
-        <div className='circle_buttons'>
-            <div className='button'></div>
-            <div className='button'></div>
-            <div className='button'></div>
-        </div>
-     </div>
-      
-      <div className='ontrack__features-image'>
-        <img src={feature} alt="" />
-      </div>
+   <>
+   <div className='features_container'>
 
+    <div className='features_text'>
+      <h1>Demonstration of feature</h1>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores quo iure, molestiae ratione cum corrupti corporis laudantium at dolor ullam eum culpa ad, nobis nam alias blanditiis, pariatur reprehenderit placeat?</p>
     </div>
+   
+   <div className='swiper_box'>
+   <Swiper
+        effect={"cube"}
+        grabCursor={true}
+        cubeEffect={{
+          shadow: false,
+          slideShadows: false,
+       
+        }}
+        pagination={true}
+        modules={[EffectCube, Pagination]} 
+        className="mySwiper"
+      >
+
+        <div className='features_slides'>
+        <SwiperSlide>
+          <img src={image1} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={image2} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={image3} />
+        </SwiperSlide>
+        </div>
+        <div className='swiper-pagination swiper-pagination1'></div>
+      
+
+      </Swiper>
+   </div>
+   
+
+      </div>
+   
+   </>
   )
 }
 

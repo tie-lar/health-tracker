@@ -8,3 +8,36 @@
 .react-chatbot-kit-chat-inner-container {
     width: 320px;
 }
+
+.bot-pfp {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    background-color: purple;
+    color: white;
+    margin-right: 15px;    
+}
+
+.help-options-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: right;
+  flex-wrap: wrap;
+}
+
+.help-button {
+  padding: 0.5rem;
+  border-radius: 25px;
+  background: transparent;
+  border: 1px solid purple;
+  margin: 3px;
+}
+
+.help-button:hover {
+  background-color: Plum;
+  transition: 0.2s;
+}
