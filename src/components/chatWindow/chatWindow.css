@@ -35,6 +35,7 @@
   background: transparent;
   border: 1px solid purple;
   margin: 3px;
+  color: black;
 }
 
 .help-button:hover {
