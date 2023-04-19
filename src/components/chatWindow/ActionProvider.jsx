@@ -43,7 +43,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     
     const handleCalorieTracking = () => {
         const message = createChatBotMessage(
-            'YET TO BE IMPLEMENTED - TELL DIRLEY TO WORK HARDER.'
+            'YET TO BE IMPLEMENTED'
         );
         botMessage(message);
     }
@@ -51,7 +51,8 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     
     const handleOther = () => {
         const message = createChatBotMessage(
-            `Sorry, I didn't catch that. Would you mind rephrasing?`
+            `Sorry, I didn't catch that. Would you mind rephrasing?`,
+            { widget: 'realPersonButton' }
         );
         botMessage(message);
     }
@@ -66,9 +67,10 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     
     
     const solvedQuery = () => {
-        const message = createChatBotMessage('Has this solved your query?', {
-            widget: 'helpOptions',
-        });
+        const message = createChatBotMessage(
+            'Has this solved your query?',
+            { widget: 'helpOptions' }
+        );
         botMessage(message);
     }
     const handleNo = () => {

@@ -1,6 +1,7 @@
 import { createChatBotMessage } from 'react-chatbot-kit';
 import BotProfilePicture from './BotProfilePicture';
 import HelpOptions from './HelpButtons';
+import RealPersonButton from './RealPersonButton';
 
 const botName = 'OntrackBot';
 
@@ -27,6 +28,10 @@ const config = {
     {
       widgetName: "helpOptions",
       widgetFunc: (props) => <HelpOptions {...props} />,
+    },
+    {
+      widgetName: "realPersonButton",
+      widgetFunc: (props) => <RealPersonButton {...props} />,
     },
   ],
 };
