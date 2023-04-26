@@ -21,8 +21,23 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
         messageArr.forEach(botMessage);
         solvedQuery();
     }
-    
-    
+
+
+	const handleLoginDetails = () => {
+		const messageArr = [
+			createChatBotMessage(
+				`If your login details aren't working, our support team can help.`
+			),
+            createChatBotMessage(
+				`Click the button below and I'll connect you to a member of the
+				ontrack team now.`,
+				{ widget: 'realPersonButton' }
+			)
+		];
+		messageArr.forEach(botMessage);
+	}
+
+
     const handleSignup = () => {
         const messageArr = [
             createChatBotMessage(
@@ -39,16 +54,36 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
         messageArr.forEach(botMessage);
         solvedQuery();
     }
-    
-    
+
+
+	const handleExercise = () => {
+		const messageArr = [
+			createChatBotMessage(
+				`To track or log your exercise, COMPLETE LATER`
+			)
+		]
+	}
+
+
+	const handleLostAccount = () => {
+		const messageArr = [
+			createChatBotMessage(
+				`If you've lost access to your account, you can CHECK THIS LATER`
+			)
+		];
+		messageArr.forEach(botMessage);
+        solvedQuery();
+	}
+
+
     const handleCalorieTracking = () => {
         const message = createChatBotMessage(
             'YET TO BE IMPLEMENTED'
         );
         botMessage(message);
     }
-    
-    
+
+
     const handleOther = () => {
         const message = createChatBotMessage(
             `Sorry, I didn't catch that. Would you mind rephrasing?`,
@@ -56,16 +91,16 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
         );
         botMessage(message);
     }
-    
-    
+
+
     const handleRealPerson = () => {
         const message = createChatBotMessage(`Connecting you to a real person...
-            (not really I haven't done it yet)`
+            (NOT REALLY I HAVEN'T DONE IT YET)`
         );
         botMessage(message);
     }
-    
-    
+
+
     const solvedQuery = () => {
         const message = createChatBotMessage(
             'Has this solved your query?',
@@ -86,13 +121,13 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
         );
         botMessage(message);
     }
-    
-    
+
+
     const botMessage = (message) => {
         setState((prev) => ({...prev, messages: [...prev.messages, message]}));
     }
-  
-    
+
+
     return (
         <div>
             {React.Children.map(children, (child) => {
@@ -104,7 +139,10 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
                         handleOther,
                         handleRealPerson,
                         handleYes,
-                        handleNo
+                        handleNo,
+						handleExercise,
+						handleLostAccount,
+						handleLoginDetails
                     },
                 });
             })}

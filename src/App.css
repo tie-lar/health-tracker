@@ -122,3 +122,13 @@ body {
     margin: 4rem 2rem;
   }
 }
+
+
+.react-chatbot-kit-chat-input {
+  color: black;
+}
+
+.react-chatbot-kit-user-chat-message {
+  color: black;
+}
+
