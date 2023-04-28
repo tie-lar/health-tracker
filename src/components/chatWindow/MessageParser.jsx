@@ -36,6 +36,14 @@ const MessageParser = ({ children, actions }) => {
 		else if (message.includes('exercise')) {
 			actions.handleExercise();
 		}
+		else if (message.includes('yes') ||
+                 message.includes('yep') ||
+                 message.includes('yeah')) {
+            actions.handleYes();
+        }
+        else if (message.includes('no') || message.includes('nope')) {
+            actions.handleNo();
+        }
         else {
             actions.handleOther();
         }

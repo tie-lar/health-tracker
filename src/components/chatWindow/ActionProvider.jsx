@@ -29,9 +29,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
 				`If your login details aren't working, our support team can help.`
 			),
             createChatBotMessage(
-				`Click the button below and I'll connect you to a member of the
-				ontrack team now.`,
-				{ widget: 'realPersonButton' }
+				`Contact them via the "Support" link at the bottom of this page.`,
 			)
 		];
 		messageArr.forEach(botMessage);
@@ -68,8 +66,19 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
 	const handleLostAccount = () => {
 		const messageArr = [
 			createChatBotMessage(
-				`If you've lost access to your account, you can CHECK THIS LATER`
-			)
+				`If you've lost access to your account, you can reset your
+				password by clicking the "Login" button in the top corner of of
+				the home page and then clicking the "Reset" button next to
+				"Forgot your password?".`
+			),
+            createChatBotMessage(
+                `Follow the instructions to set a new password.`
+            ),
+            createChatBotMessage(
+                `If you still can't access your account, speak to a member of
+                our support team by clicking the "Support" button at the bottom
+                of this page.`
+            )
 		];
 		messageArr.forEach(botMessage);
         solvedQuery();
@@ -87,31 +96,37 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     const handleOther = () => {
         const message = createChatBotMessage(
             `Sorry, I didn't catch that. Would you mind rephrasing?`,
-            { widget: 'realPersonButton' }
         );
         botMessage(message);
     }
 
 
     const handleRealPerson = () => {
-        const message = createChatBotMessage(`Connecting you to a real person...
-            (NOT REALLY I HAVEN'T DONE IT YET)`
+        // const message = createChatBotMessage(
+        //     `Connecting you to a real person...
+        //     (NOT REALLY I HAVEN'T DONE IT YET)`
+        // );
+        const message = createChatBotMessage(
+            `If you wouuld like to talk to one of our support staff, just click
+            the "Support" button at the bottom of the page and follow the
+            instructions.`
         );
         botMessage(message);
+        solvedQuery();
     }
 
 
     const solvedQuery = () => {
         const message = createChatBotMessage(
             'Has this solved your query?',
-            { widget: 'helpOptions' }
         );
         botMessage(message);
     }
     const handleNo = () => {
         const message = createChatBotMessage(
-            `I'm sorry to hear that. If you would like me to connect you to a
-            real person, just say 'Connect me to a real person'.`
+            `I'm sorry to hear that. If you would like to speak to a member of
+            our support team, contact them via the "Support" link at the bottom
+            of the page.`
         );
         botMessage(message);
     }
