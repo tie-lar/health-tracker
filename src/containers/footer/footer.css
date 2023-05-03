@@ -7,10 +7,6 @@
     padding: 5rem;
 }
 
-.footer-btm-text img{
-    width: 9em;
-}
-
 .footer-content-input input{
     color: black;
 }
@@ -45,11 +41,14 @@
     font-family: var(--font-family);
 }
 
-.footer-content h1{
-    font-weight: 800;
-    font-size:70px;
-    line-height: 80px;
-    letter-spacing: -0.04em;
+
+.footer-content h2{
+    color: white;
+    font-weight: 200;
+    font-size:30px;
+    line-height: 60px;
+    letter-spacing: -0.01em;
+    color: white;
 }
 
 .footer-content-input{
@@ -65,7 +64,7 @@
 .footer-content-input input {
     flex:1;
     width: 100%;
-    min-height: 50px;
+    height: 50px;
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 14px;
@@ -79,7 +78,7 @@
 .footer-content-input button{
     flex: 0.25;
     width: 100%;
-    min-height: 50px;
+    height: 50px;
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 14px;
@@ -99,6 +98,183 @@
     transition: 0.2s;
 }
 
+
+@media screen and (max-width: 945px) {
+    .footer-content-input button{
+        font-size: 13px;
+    }
+
+    .footer-btm-text ul{
+        font-size: 13px;
+    }
+
+    .footer-content-input input{
+        font-size: 13px;
+    }
+
+    .footer-content h2{
+        font-size: 28px;
+    }
+
+}
+
+
+
+@media screen and (max-width: 916px){
+    .footer-content-input button{
+        font-size: 10px;
+        height: 40px;
+    }
+
+    .footer-btm-text ul{
+        font-size: 10px;
+    }
+
+    .footer-content-input input{
+        font-size: 10px;
+        width: 80%;
+        height: 40px;
+       
+    }
+
+    .footer-content h2{
+        font-size: 26px;
+    }
+
+
+
+   
+}
+
+
+@media screen and (max-width: 829px) {
+    .footer-content-input button{
+        font-size: 8px;
+        height: 40px;
+    }
+
+    .footer-btm-text ul{
+        font-size: 8px;
+    }
+
+    .footer-content-input input{
+        font-size: 8px;
+        width: 80%;
+        height: 40px;
+       
+    }
+
+    .footer-content h2{
+        font-size: 22px;
+    }
+
+  
+}
+
+@media screen and (max-width: 771px) {
+ .footer-text h2{
+    font-size: 20px;
+ }
+
+ .footer-content-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:50%;
+    gap: 10px;
+    padding-bottom: 1em;
+   
+
+ }
+
+ .footer-content-input input{
+    height: 40px;
+    line-height: 48px;
+    flex: 1;
+    width: 50%;
+   
+  
+ }
+
+ .footer-content-input button{
+    flex: 1;
+    width: 50%;
+    transform: translateX(5%);
+ }
+
+ .footer-btm-text ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+ }
+
+ .footer-btm-text{
+   
+}
+
+}
+
+@media screen and (max-width: 662px) {
+    .footer-text h2{
+        font-size: 18px;
+     }
+
+ .footer-content-input input{
+    font-size: 6px;
+ }
+
+ .footer-content-input button{
+    font-size: 6px;
+ }
+
+}
+
+@media screen and (max-width: 630px) {
+    .footer-content-input {
+        width: 8rem;
+    }
+}
+
+
+@media screen and(max-width: 588px){
+    .footer-content-input input{
+     
+     }
+    
+     .footer-content-input button{
+     }
+}
+
+
+@media screen and (max-width: 550px) {
+   
+
+}
+
+@media screen and (max-width: 444px){
+    .footer-text h2{
+        font-size: 14px;
+     }
+}
+
+@media screen and (max-width: 400px){
+    .footer-text h2{
+        font-size: 10px;
+     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (min-width: 1049px) {
     
 }
@@ -109,11 +285,3 @@
 }
 
 
-@media screen and (max-width: 700px) {
-
-}
-
-@media screen and (max-width: 550px) {
-   
-
-}

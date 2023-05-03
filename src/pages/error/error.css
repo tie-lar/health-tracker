@@ -1,3 +1,104 @@
-.error_container img{
-    object-fit: cover;
+.error_container{
+    display: flex;
+    justify-content: center;
+    margin: 6rem;
+   
+}
+
+.error_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.error_content h1{
+    color: white;
+    font-weight: 100;
+    text-align: center;
+    padding-bottom: 2rem;
+    font-size: 8rem;
+}
+
+.error_content h2{
+    color: white;
+    font-weight: 100;
+    text-align: center;
+    padding-bottom: 4rem;
+    font-size: 2rem;
+}
+
+
+.error_content p{
+    color: white;
+    font-weight: 100;
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+.error_content button{
+   margin-top: 4rem;
+   padding: 10px 20px;
+   font-size: 1.1rem;
+   background: #72236A;
+   border: none;
+   border-radius: 2px;
+   color: white;
+   cursor: pointer;
+}
+
+.error_content button:hover{
+    background-color: rgb(164, 33, 33);
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1453px){
+   
+}
+
+@media screen and (max-width: 1417px){
+   
+
+}
+
+@media screen and (max-width: 1375px) {
+
+  
+}
+
+
+@media screen and (max-width: 1207px) {
+  
+
+}
+
+@media screen and (max-width: 1050px) {
+  
+
+}
+
+
+@media screen and (max-width: 867px) {
+
+  
+}
+
+@media screen and (max-width: 732px) {
+ 
+}
+
+@media screen and (max-width: 600px) {
+  
+
+}
+
+@media screen and (max-width: 550px){
+ 
 }

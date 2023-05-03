@@ -1,0 +1,30 @@
+.fileUpload input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background: #72236A;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 25px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+.fileUpload { 
+    display: flex;
+    gap: 10px;
+}
+
+
+@media screen and (max-width: 550px) {
+
+                    
+}

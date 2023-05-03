@@ -45,7 +45,7 @@
 
 }
 
-.edit_account_form_btns {
+.edit_account_form_btns_share {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -81,4 +81,20 @@
     cursor: pointer;
     width: 85px;
 
+}
+
+
+.shareGoal_title { 
+    display: block;
+}
+
+@media screen and (max-width: 550px) {
+    .center_padding {
+         padding: 0px;}
+    .section__padding {
+        padding: 1rem 2rem;}
+    .edit_account_form_btns_share{
+        justify-content: center !important ;
+    }
+                    
 }

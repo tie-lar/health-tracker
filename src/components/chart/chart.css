@@ -27,3 +27,30 @@
 .baby_blue {
     background-color: #8884d8;
 }
+
+.recharts-default-tooltip { 
+    background-color: #8884d8 !important;
+    border: none !important;
+    border-radius: 5px;
+}
+
+.recharts-label { color: aqua;}
+
+
+
+
+@media screen and (max-width: 550px) {
+    .recharts-responsive-container 
+    {
+        margin-left: -30px;
+    }
+    .account_header { 
+        flex-direction: column;
+    }
+    .account_header_right { 
+        gap: 15px;
+        margin-top: 1rem;
+    }
+
+                    
+}

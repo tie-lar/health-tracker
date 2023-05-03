@@ -7,7 +7,12 @@ import test from '../../assets/test_image.jpg';
 import women from '../../assets/women_2.png';
 import image3 from '../../assets/image_3.jpg';
 import {Outlet, Link} from "react-router-dom";
+
+
+
 const Signup = () => {
+    
+
     return(
         <div className='signup_container'>
         <form action="" className='signup_form'>
@@ -31,3 +36,6 @@ const Signup = () => {
 };
 
 export default Signup
+
+
+

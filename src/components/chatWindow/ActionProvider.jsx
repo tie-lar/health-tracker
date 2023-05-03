@@ -21,8 +21,21 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
         messageArr.forEach(botMessage);
         solvedQuery();
     }
-    
-    
+
+
+	const handleLoginDetails = () => {
+		const messageArr = [
+			createChatBotMessage(
+				`If your login details aren't working, our support team can help.`
+			),
+            createChatBotMessage(
+				`Contact them via the "Support" link at the bottom of this page.`,
+			)
+		];
+		messageArr.forEach(botMessage);
+	}
+
+
     const handleSignup = () => {
         const messageArr = [
             createChatBotMessage(
@@ -39,44 +52,81 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
         messageArr.forEach(botMessage);
         solvedQuery();
     }
-    
-    
+
+
+	const handleExercise = () => {
+		const messageArr = [
+			createChatBotMessage(
+				`To track or log your exercise, COMPLETE LATER`
+			)
+		]
+	}
+
+
+	const handleLostAccount = () => {
+		const messageArr = [
+			createChatBotMessage(
+				`If you've lost access to your account, you can reset your
+				password by clicking the "Login" button in the top corner of of
+				the home page and then clicking the "Reset" button next to
+				"Forgot your password?".`
+			),
+            createChatBotMessage(
+                `Follow the instructions to set a new password.`
+            ),
+            createChatBotMessage(
+                `If you still can't access your account, speak to a member of
+                our support team by clicking the "Support" button at the bottom
+                of this page.`
+            )
+		];
+		messageArr.forEach(botMessage);
+        solvedQuery();
+	}
+
+
     const handleCalorieTracking = () => {
         const message = createChatBotMessage(
             'YET TO BE IMPLEMENTED'
         );
         botMessage(message);
     }
-    
-    
+
+
     const handleOther = () => {
         const message = createChatBotMessage(
             `Sorry, I didn't catch that. Would you mind rephrasing?`,
-            { widget: 'realPersonButton' }
         );
         botMessage(message);
     }
-    
-    
+
+
     const handleRealPerson = () => {
-        const message = createChatBotMessage(`Connecting you to a real person...
-            (not really I haven't done it yet)`
+        // const message = createChatBotMessage(
+        //     `Connecting you to a real person...
+        //     (NOT REALLY I HAVEN'T DONE IT YET)`
+        // );
+        const message = createChatBotMessage(
+            `If you wouuld like to talk to one of our support staff, just click
+            the "Support" button at the bottom of the page and follow the
+            instructions.`
         );
         botMessage(message);
+        solvedQuery();
     }
-    
-    
+
+
     const solvedQuery = () => {
         const message = createChatBotMessage(
             'Has this solved your query?',
-            { widget: 'helpOptions' }
         );
         botMessage(message);
     }
     const handleNo = () => {
         const message = createChatBotMessage(
-            `I'm sorry to hear that. If you would like me to connect you to a
-            real person, just say 'Connect me to a real person'.`
+            `I'm sorry to hear that. If you would like to speak to a member of
+            our support team, contact them via the "Support" link at the bottom
+            of the page.`
         );
         botMessage(message);
     }
@@ -86,13 +136,13 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
         );
         botMessage(message);
     }
-    
-    
+
+
     const botMessage = (message) => {
         setState((prev) => ({...prev, messages: [...prev.messages, message]}));
     }
-  
-    
+
+
     return (
         <div>
             {React.Children.map(children, (child) => {
@@ -104,7 +154,10 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
                         handleOther,
                         handleRealPerson,
                         handleYes,
-                        handleNo
+                        handleNo,
+						handleExercise,
+						handleLostAccount,
+						handleLoginDetails
                     },
                 });
             })}

@@ -1,9 +1,9 @@
 .scroll_section {
-    width:48%;
-    height:350px;
-    line-height:3em;
-    overflow:auto;
-    padding:5px;
+      height: 350px;
+      line-height: 3em;
+      overflow: auto;
+      padding: 5px;
+      width: 100%;
 
 }
 
@@ -27,4 +27,8 @@
 .scroll_element_right {
     width: 50px;
     text-align: left;
+}
+
+.calories_text {
+    color: darkgrey;
 }

@@ -1,93 +1,34 @@
-/*import React, {useState} from 'react';
-import {Outlet, Link} from "react-router-dom";
+import React, {useState} from 'react';
+import {Link} from "react-router-dom";
 import './dashboard.css';
+import feature from '../../assets/test_image_5.jpg';
 
 const Dashboard = () => {
-
-    
     return(
-        <div>
-            <h1>AHHHHH</h1>
+        <div className='dashboard_container'>
+            <div className='dashboard_header'>
+                <h1 id='dashboard'>Dashboard</h1>
+              
+            </div>
+            
+            <div className='wotd_header'>
+                    <h2 id='h2_1'>Workout of the Day</h2>
+                    <h2 id='h2_2'>Squats</h2>
+                </div>
+
+            <div className='dashboard_trivia'>
+                    <h2>Did you know?</h2>
+                    <div className='dashboard_trivia-content'>
+                        <p id='trivia-text'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, illum. Culpa ipsum omnis ut aut! Reprehenderit consectetur iusto nihil incidunt, culpa voluptatibus iure, sed est at blanditiis obcaecati voluptatem quibusdam.</p>
+                    </div>
+                </div>
+                <div className='dashboard_profile'>
+                <h3>Username</h3>
+                    <button>Edit Details</button>
+                    <button>History</button>
+                </div>
         </div>
     )
 }
-*/
-
-/*
-export default Dashboard;
-
-*/
-
-import React, {useState} from 'react';
-import {Outlet, Link} from "react-router-dom";
-import { NavLink} from 'react-router-dom';
-import './dashboard.css';
-import {
-    FaTh,
-    FaBars,
-    FaUserAlt,
-    FaRegChartBar,
-    FaCommentAlt,
-    FaShoppingBag,
-    FaThList
-}from "react-icons/fa";
-
-const Dashboard = ({children}) => {
-    const[isOpen ,setIsOpen] = useState(false);
-    const toggle = () => setIsOpen (!isOpen);
-    const menuItem=[
-        {
-            path:"/dashboard",
-            name:"Dashboard",
-            icon:<FaTh/>
-        },
-        {
-            path:"/about",
-            name:"About",
-            icon:<FaUserAlt/>
-        },
-        {
-            path:"/analytics",
-            name:"Analytics",
-            icon:<FaRegChartBar/>
-        },
-        {
-            path:"/comment",
-            name:"Comment",
-            icon:<FaCommentAlt/>
-        },
-        {
-            path:"/product",
-            name:"Product",
-            icon:<FaShoppingBag/>
-        },
-        {
-            path:"/productList",
-            name:"Product List",
-            icon:<FaThList/>
-        }
-    ]
-    return (
-        <div className="container">
-           <div style={{width: isOpen ? "200px" : "50px"}} className="sidebar">
-               <div className="top_section">
-                   <h1 style={{display: isOpen ? "block" : "none"}} className="logo">Logo</h1>
-                   <div style={{marginLeft: isOpen ? "50px" : "0px"}} className="bars">
-                       <FaBars onClick={toggle}/>
-                   </div>
-               </div>
-               {
-                   menuItem.map((item, index)=>(
-                       <Link to={item.path} key={index} className="link" activeclassName="active">
-                           <div className="icon">{item.icon}</div>
-                           <div style={{display: isOpen ? "block" : "none"}} className="link_text">{item.name}</div>
-                       </Link>
-                   ))
-               }
-           </div>
-           <main>{children}</main>
-        </div>
-    );
-};
 
 export default Dashboard;

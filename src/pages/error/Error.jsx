@@ -6,8 +6,10 @@ const Error = () => {
   return (
     <div className='error_container'>
         <div className='error_content'>
-          <h1>Error 404! Page not found. You are lost in digital space, press the home button below to return home</h1>
-          <button><Link to="/home"></Link></button>
+          <h1>404</h1>
+          <h2>Oops, page not found</h2>
+          <p>Unfortunately the page you've requested cannot be found. Press the button below to return home</p>
+          <button><Link to="/home">Home</Link></button>
         </div>
   </div>
   )};

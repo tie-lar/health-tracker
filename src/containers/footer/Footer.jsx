@@ -4,7 +4,7 @@ import './footer.css';
 
 const Footer = () => {
     return (
-        <div className='footer_container'>
+        <div className='footer_container gradient2__bg'>
             <div className='footer-content'>
                 <div className='footer-text'>
                     <h2>Begin your fitness journey</h2>

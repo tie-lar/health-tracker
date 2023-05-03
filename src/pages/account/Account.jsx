@@ -9,7 +9,8 @@ import { Outlet, Link } from "react-router-dom";
 const Account = () => {
   return (
     <>
-      <div className='gradient__bg section__padding account_header default_font'>
+      <h1 className='main_heading'>Account</h1>
+      <div className=' section__padding account_header default_font'>
           <div className='account_header_left'>
             <h2 className="margin_bottom_20">User 123</h2>
             <div className='account_image'>
@@ -21,7 +22,7 @@ const Account = () => {
             <Link to="/history" className='default_button'>History</Link>
           </div>
       </div>
-      <div className='section__padding account_header default_font'>
+      <div className='section__padding_less account_header default_font'>
           <div className='account_header_left'>
               <Chart />
           </div>

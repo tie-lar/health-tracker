@@ -59,7 +59,7 @@ function AccountForm() {
       <br />
       <label>
         Time Frame:
-        <input type="date" value={password} onChange={passwordChange} />
+        <input type="number" value={password} onChange={passwordChange} />
       </label>
       <br />
 
@@ -81,7 +81,7 @@ function AccountForm() {
       </div>
 
       <br />
-      <div className="edit_account_form_btns">
+      <div className="edit_account_form_btns_share">
           <div className="edit_account_form_btns_left">
               
           </div>
@@ -100,17 +100,7 @@ function AccountForm() {
 const ShareGoal = () => {
   return (
     <>
-      <div className='gradient__bg section__padding account_header default_font'>
-          <div className='account_header_left'>
-            <h2 className="margin_bottom_20">User 123</h2>
-            <div className='account_image'>
-              <img src={circle} alt="" />
-            </div>
-          </div>
-          <div className='account_header_right'>
-
-          </div>
-      </div>
+      <h1 className='main_heading'>Share Goal</h1>
       <div className='section__padding default_font'>
           <AccountForm />
       </div>

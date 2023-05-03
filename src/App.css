@@ -19,6 +19,13 @@ body {
     background-color: #72236A;
 }
 
+input {
+    color: black;
+}
+
+.bold {
+    font-weight: bold;
+}
 /* Scrollbar styling */
 
 /* width */
@@ -80,6 +87,15 @@ body {
 	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
+
+.main_heading{
+  font-weight: 200;
+  font-size: 4rem;
+  padding: 3rem 2rem 1rem 2rem;
+  display: flex  ;
+  justify-content: center;
+}
+
 
 @-webkit-keyframes scale-up-center {
   0% {

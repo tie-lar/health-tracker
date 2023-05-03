@@ -65,3 +65,12 @@
 .caution_button {
     color: red;
 }
+
+
+.fileUpload {
+    padding: 20px;
+}
+
+.fileUpload input {
+    color: white;
+}

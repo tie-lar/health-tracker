@@ -1,0 +1,42 @@
+.search_element table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+
+.search_element td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.search_element tr:nth-child(even) {
+  background-color: darkgrey;
+}
+
+.search_element input {
+    width: 100%;
+  padding: 12px 20px;
+  margin: 12px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.search_element {
+  width: 70%;
+}
+
+
+.search_bar {margin-bottom: 10px;}
+
+
+.search_scroll_section {
+
+  max-height: 350px;
+  line-height: 3em;
+    overflow: auto;
+    padding: 5px;
+    width: 100%;
+}

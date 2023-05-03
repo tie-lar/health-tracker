@@ -18,7 +18,7 @@ const Features = () => {
 
   return (
    <>
-   <div className='features_container'>
+   <div className='features_container gradient2__bg' >
 
     <div className='features_text'>
       <h1>Demonstration of feature</h1>
@@ -50,7 +50,7 @@ const Features = () => {
           <img src={image3} />
         </SwiperSlide>
         </div>
-        <div className='swiper-pagination swiper-pagination1'></div>
+        <div className='swiper-pagination1'></div>
       
 
       </Swiper>

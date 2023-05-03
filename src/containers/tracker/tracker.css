@@ -35,9 +35,124 @@
    gap: 10%;
 }
 
+.tracker-feature p{
+    color: white;
+}
+
 .tracker-content h1{
     padding-bottom: 2rem;
 }
+
+
+@media screen and (max-width: 1453px){
+   
+}
+
+@media screen and (max-width: 1417px){
+    .tracker-feature img{
+        width: 30rem;
+      
+    }
+
+    .tracker-feature p{
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 1375px) {
+    .tracker-feature img{
+        width: 28rem;
+      
+    }
+  
+}
+
+
+@media screen and (max-width: 1207px) {
+    .tracker-feature img{
+        width: 24rem;
+      
+    }
+
+    .tracker-feature p{
+        font-size: 0.8rem;
+    }
+
+}
+
+
+/*column this shit*/
+@media screen and (max-width: 1050px) {
+   .tracker-feature{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
+
+   .tracker-feature p{
+    width: 24rem;
+}
+
+}
+
+@media screen and (max-width: 950px) {
+    .tracker-feature img{
+        width: 22rem;
+      
+    }
+
+}
+
+
+@media screen and (max-width: 890px) {
+    .tracker-feature img{
+        width: 18rem;
+      
+    }
+
+    .tracker-feature p{
+        font-size: 0.7rem;
+        width: 18rem;
+    }
+  
+}
+
+@media screen and (max-width: 832px) {
+    .tracker-feature img{
+        width: 16rem;
+      
+    }
+}
+
+@media screen and (max-width: 771px) {
+    .tracker-feature img{
+        width: 14rem;
+      
+    }
+
+
+    .tracker-feature p{
+        font-size: 0.6rem;
+        width: 14rem;
+    }
+  
+
+}
+
+@media screen and (max-width: 550px){
+ .tracker-content h1{
+    font-size: 1.5rem;
+ }
+}
+
+
+
+
+
+
+
 
 @media screen and (min-width: 1049px) {
     

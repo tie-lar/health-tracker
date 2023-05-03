@@ -1,0 +1,261 @@
+
+
+.workouts_navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    text-decoration: none;
+    gap: 10px;
+    margin-right: 30px;
+    margin-top: 20px;
+    
+}
+
+.workouts_navbar p{
+    color: white;
+}
+
+.workouts_header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    color: white;
+}
+
+.workouts_header input{
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    width: 24rem;
+    color: black;
+}
+
+.workouts_header h1{
+    padding: 20px;
+    font-weight: 200;
+    font-size: 3rem;
+}
+
+.exercises{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.exercises_image{
+    padding: 20px;
+    width: 30rem;
+    height: 20rem;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+    align-self: center;
+   
+}
+
+.pushups{
+    background-image: url(../../assets/pushup.jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.squats{
+    background-image: url(../../assets/squats.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.crunches{
+    background-image: url(../../assets/crunch.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.situps{
+    background-image: url(../../assets/situp.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.plank{
+    background-image: url(../../assets/plank.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.pullups{
+    background-image: url(../../assets/pullup.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+.exercises_content{
+  margin-bottom: 1rem;
+    flex-direction: column;
+    width: 40rem;
+    text-align: start;
+    margin-top: 10px;
+  
+}
+
+.exercises_content #click-content{
+    cursor: pointer;
+}
+
+.exercises_content p{
+    color: white;
+    font-size: 16px;
+  
+}
+
+.exercises_content ul{
+   margin-top: 1rem;
+  
+}
+
+.exercises_content-v2 ul{
+    margin-top: 1rem;
+}
+
+
+.profile_button:hover{
+   color: red;
+   transition: 1s;
+}
+
+.logout_button:hover{
+    color: red;
+    transition: 1s;
+}
+
+.exercises_image-2{
+    position: relative;
+    display: none;
+    padding: 20px;
+    width: 26rem;
+    height: 22rem;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    align-self: center;
+
+}
+
+.exercises_image-2:hover {
+    opacity: .5;
+    transition: 0.2s;
+  
+}
+
+.exercises_content-v2{
+    cursor: pointer;
+    position: relative;
+    display: none;
+    padding: 20px;
+    width: 26rem;
+    height: 22rem;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    align-self: center;
+    flex-direction: column;
+}
+
+.exercises_content-v2 p{
+    color: white;
+}
+
+@media screen and (max-width: 1207px){
+    .exercises_image{
+        margin-left: 4rem;
+        width: 24rem;
+        height: 18rem;
+        
+    }
+
+    .exercises_content {
+        margin-right: 8rem;
+
+    }
+
+    .exercises_content p{
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 1050px){
+    .pushup-content{
+        display: none!important
+    }
+
+    .squats-content{
+        display: none!important
+    }
+
+    .crunches-content{
+        display: none!important
+    }
+
+    .situps-content{
+        display: none!important
+    }
+
+    .plank-content{
+        display: none!important
+    }
+
+    .pullup-content{
+        display: none!important
+    }
+
+    .exercises_content{
+        display: flex!important
+    }
+    
+}
+
+
+
+@media screen and (max-width: 1050px) {
+    .exercises_content{
+        display: none;
+    }
+
+    .exercises_image{
+       display: none;
+    }
+
+    .exercises_image-2{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .exercises_image-2 p{
+        font-size: 5rem;
+        color: rgb(255, 255, 255);
+        font-weight: 400;
+    }
+
+    .exercises_content{
+        display: none!important
+    }
+  
+}
+
+
+
+@media screen and (max-width: 600px) {
+  
+
+}
+
+@media screen and (max-width: 550px){
+ 
+}

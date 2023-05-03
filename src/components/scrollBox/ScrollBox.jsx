@@ -13,7 +13,6 @@ const ScrollBox = ({ elements }) => {
       );
 
   }
-  console.log(elements)
   return (
 
     <div className="scroll_section">

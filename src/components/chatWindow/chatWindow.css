@@ -17,7 +17,7 @@
     justify-content: center;
     align-items: center;
     font-size: 0.9rem;
-    background-color: purple;
+    background-color: #72236A;
     color: white;
     margin-right: 15px;    
 }
@@ -35,6 +35,7 @@
   background: transparent;
   border: 1px solid purple;
   margin: 3px;
+  color: black;
 }
 
 .help-button:hover {
