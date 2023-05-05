@@ -1,0 +1,270 @@
+.reset_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+}
+
+.reset_container img{
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    
+}
+
+.reset_content{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    width: 50rem;
+    height: 26rem;
+    border-radius: 5px;
+}
+
+.reset_content h2{
+   align-self: center;
+   margin-bottom: 1rem;
+   font-size: 36px;
+}
+
+.reset_content p{
+    font-size: 16px;
+    text-align: center;
+}
+
+.reset_content button, .reset_email{
+    align-self: center;
+}
+
+.reset_content h2, .reset_content p, #enter_email {
+    color: black;
+    
+}
+
+.reset_content h2{
+ margin-top: 2rem;
+ margin-bottom: 2rem;
+}
+
+.reset_content #enter_email{
+    margin-top: 3rem;
+}
+
+
+.reset_email{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.reset_email input{
+    border: 2px solid black;
+    border-radius: 2px;
+    padding: 0.5rem;
+    width: 24rem;
+    margin-bottom: 1rem;
+    color: black;
+}
+
+.reset_content button{
+    border: 2px solid black;
+    border-radius: 2px;
+    padding: 0.5rem;
+    width: 24rem;
+    color: white;
+    background-color: black;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.reset_content button:hover{
+    background-color: grey;
+    border-color: grey;
+    
+}
+
+
+.reset_content #reset_text{
+    margin-top: 1.5rem;
+}
+
+
+
+@media screen and (max-width: 1050px) {
+    .reset_content{
+        width: 46rem;
+        height: 26rem;
+    }
+
+}
+
+@media screen and (max-width: 970px) {
+    .reset_container img{
+        width: 22rem;
+    }
+
+    .reset_content{
+        width: 42rem;
+        height: 24rem;
+    }
+
+    .reset_content h2{
+        font-size: 30px;
+     }
+
+     .reset_email input{
+        padding: 0.5rem;
+        width: 22rem;
+        font-size: 10px;
+    }
+    
+    .reset_content button{
+        padding: 0.5rem;
+        width: 22rem;
+        font-size: 10px;
+    }
+
+    .reset_content p{
+        font-size: 14px;
+    }
+
+}
+
+
+@media screen and (max-width: 867px) {
+    .reset_container img{
+        width: 20rem;
+    }
+
+    .reset_content{
+        width: 38rem;
+        height: 24rem;
+    }
+
+    .reset_content h2{
+        font-size: 26px;
+     }
+
+     .reset_email input{
+        padding: 0.5rem;
+        width: 20rem;
+    }
+    
+    .reset_content button{
+        padding: 0.5rem;
+        width: 20rem;
+    }
+
+    .reset_email label{
+        font-size: 14px;
+    }
+  
+}
+
+@media screen and (max-width: 732px) {
+    .reset_container img{
+        width: 18rem;
+    }
+
+    .reset_content{
+        width: 34rem;
+        height: 22rem;
+    }
+
+    .reset_content h2{
+        font-size: 22px;
+     }
+
+     .reset_email input{
+        padding: 0.5rem;
+        width: 18rem;
+    }
+    
+    .reset_content button{
+        padding: 0.5rem;
+        width: 18rem;
+        margin-bottom: 1rem;
+    }
+
+    .reset_email label{
+        font-size: 14px;
+    }
+
+    .reset_content p{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 628px) {
+    .reset_content{
+        width: 28rem;
+        height: 22rem;
+    }
+
+    .reset_content h2{
+        font-size: 20px;
+     }
+
+    .reset_content p{
+        font-size: 10px;
+    }
+
+    .reset_email label{
+        font-size: 12px;
+    }
+
+    
+    .reset_email input{
+        width: 14rem;
+    }
+    
+    .reset_content button{
+        width: 14rem;
+
+    }
+
+}
+
+@media screen and (max-width: 550px){
+    .reset_container img{
+        width: 16rem;
+    }
+
+    .reset_content{
+        width: 24rem;
+        height: 18rem;
+    }
+
+    .reset_content h2{
+        font-size: 18px;
+     }
+
+    .reset_content p{
+        font-size: 9px;
+    }
+
+    .reset_email label{
+        font-size: 10px;
+    }
+
+    
+    .reset_email input{
+        width: 12rem;
+       
+    }
+    
+    .reset_content button{
+        width: 12rem;
+        margin-bottom: 0;
+       
+    }
+
+    .reset_content #enter_email{
+        margin-top: 1.5rem;
+    }
+
+
+   
+
+}
