@@ -45,6 +45,129 @@
     padding: 1rem 6rem;
 }
 
+
+.record_scroll_section {
+    height:350px;
+    line-height:3em;
+    overflow:auto;
+    padding:5px;
+    width: 100%;
+
+}
+
+.scroll_element {
+    background: green;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 6px 4px;
+    background-color: #72236A;
+    border-radius: 5px;
+
+}
+
+.scroll_element_left {
+    padding-left: 10px;
+    display: flex;
+    flex-direction:  column;
+    flex: 1;
+
+}
+
+.scroll_element_left div {
+  height: 45px;
+
+}
+
+.scroll_element_right {
+    display: flex;
+    text-align: left;
+    margin: auto;
+}
+
+.plus_icon {
+    max-width: 35px;
+    max-height:  35px;
+    cursor: pointer;
+}
+
+
+.calories_text {
+color: darkgrey;
+}
+
+.notification {
+  position: fixed;
+  height: 50px;
+  top: 5rem;
+
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+
+  background-color: green;
+  padding: 16px;
+  border-radius: 4px;
+  transition: opacity 0.5s ease-in-out; /* Add transition for opacity */
+}
+
+.notification {
+
+}
+
+.notification p {
+  margin: 0;
+}
+
+.notification.fade-out {
+  opacity: 0; /* Set opacity to 0 for fade-out effect */
+}
+
+.search_element table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  
+  .search_element td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  .search_element tr:nth-child(even) {
+    background-color: darkgrey;
+  }
+  
+  .search_element input {
+      width: 100%;
+    padding: 12px 20px;
+    margin: 12px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .search_element {
+    width: 70%;
+  }
+  
+  
+  .search_bar {margin-bottom: 10px;}
+  
+  
+  .search_scroll_section {
+  
+    max-height: 350px;
+    line-height: 3em;
+      overflow: auto;
+      padding: 5px;
+      width: 100%;
+  }
+  
+
+
 @media screen and (max-width: 550px) {
     .search_element {
         width: 90%;

@@ -4,38 +4,35 @@ import { Tracker, Features } from '../../containers';
 import { ScrollBox } from '../../components';
 import { Outlet, Link } from "react-router-dom";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-
+import axios from 'axios';
 
 
 const History = () => {
-   const [activeButtonId, setActiveButtonId] = useState('button1');
+   const [activeButtonId, setActiveButtonId] = useState(1);
+   const [meals, setMeals] = useState([]);
+
+   const storedUser = localStorage.getItem('user');
+
+   useEffect(() => {
+      const fetchAllMeals = async () => {
+         try {
+            const response = await axios.get('http://localhost:8800/getmealhistory', { params: { id: storedUser } });
+            console.log(response.data);
+            //setReceivedUserName(response.data.userName);
+   
+         } catch (err) {
+            console.log(err)
+         }
+      }
+      fetchAllMeals()
+    }, [])
 
    const handleButtonClick = (id) => {
       setActiveButtonId(id);
    };
 
-   const data_set_1 = [];
-   const data_set_2 = [];
-   const data_set_3 = [];
-
-   let data;
-   if (activeButtonId === 'button1') {
-      data = data_set_1;
-   }
-   if (activeButtonId === 'button2') {
-      data = data_set_2;
-   }
-   if (activeButtonId === 'button3') {
-      data = data_set_3;
-   }
-   if (activeButtonId === 'button4') {
-      data = data_set_3;
-   }
-   if (activeButtonId === 'button5') {
-      data = data_set_3;
-   }
 
    //Day -> food[], exercise[]
    //    -> id, name, number (for each food or exercise)
@@ -83,17 +80,58 @@ const History = () => {
       { id: 7, name: 'Push Ups', number: 456 },
    ];
 
+   const food_elements3 = [];
+   const exercise_elements3 = [];
+
+   const food_array = [food_elements, food_elements2, food_elements3];
+   const exercise_array = [exercise_elements, exercise_elements2, exercise_elements3];
+
    const last_7_days = [
-      { id: 1, day: 'Monday', food_elements, exercise_elements},
-      { id: 2, day: 'Tuesday', food_elements2, exercise_elements2},
-      { id: 3, day: 'Wednesday', food_elements, exercise_elements2},
-      { id: 4, day: 'Thursday', food_elements, exercise_elements},
-      { id: 5, day: 'Friday', food_elements2, exercise_elements2},
-      { id: 6, day: 'Saturday', food_elements, exercise_elements2},
-      { id: 7, day: 'Sunday', food_elements2, exercise_elements}
+      { id: 1, day: 'Monday' },
+      { id: 2, day: 'Tuesday' },
+      { id: 3, day: 'Wednesday' },
+      { id: 4, day: 'Thursday' },
+      { id: 5, day: 'Friday' },
+      { id: 6, day: 'Saturday' },
+      { id: 7, day: 'Sunday' }
    ];
 
    // <-----
+
+
+   var food_data = food_array[0];
+   var exercise_data = exercise_array[0];
+
+
+
+   if (activeButtonId == 1) {
+      food_data = food_array[0];
+      exercise_data = exercise_array[0];
+   }
+   if (activeButtonId == 2) {
+      food_data = food_array[1];
+      exercise_data = exercise_array[1];
+   }
+   if (activeButtonId == 3) {
+      food_data = food_array[2];
+      exercise_data = exercise_array[2];
+   }
+   if (activeButtonId == 4) {
+      food_data = food_array[1];
+      exercise_data = exercise_array[1];
+   }
+   if (activeButtonId == 5) {
+      food_data = food_array[0];
+      exercise_data = exercise_array[0];
+   }
+   if (activeButtonId == 6) {
+      food_data = food_array[1];
+      exercise_data = exercise_array[1];
+   }
+   if (activeButtonId == 7) {
+      food_data = food_array[0];
+      exercise_data = exercise_array[0];
+   }
 
 
    return (
@@ -105,51 +143,27 @@ const History = () => {
                <img src={circle} alt="" />
             </div>
          </div>
+
          <div className='section__padding_less default_font two_scroll_boxes'>
             <div className="scrollBox_element">
-               <ScrollBox elements={food_elements} />
+               <ScrollBox elements={food_data} />
             </div>
             <div className="scrollBox_element">
-               <ScrollBox elements={exercise_elements} />
+               <ScrollBox elements={exercise_data} />
             </div>
 
          </div>
          <div className="back_button_section_history section__padding_less">
-            {last_7_days.map(element => (
-               <div className='chart_menu'>
+            <div className='history_menu'>
+               {last_7_days.map(element => (
                   <Button
-                     id="button1"
-                     isActive={activeButtonId === "button1"}
-                     onClick={() => handleButtonClick("button1")}>
-                     Calories
+                     id={element.id}
+                     isActive={activeButtonId === element.id}
+                     onClick={() => handleButtonClick(element.id)}>
+                     {element.day}
                   </Button>
-                  <Button
-                     id="button2"
-                     isActive={activeButtonId === "button2"}
-                     onClick={() => handleButtonClick("button2")}>
-                     Exercises
-                  </Button>
-                  <Button
-                     id="button3"
-                     isActive={activeButtonId === "button3"}
-                     onClick={() => handleButtonClick("button3")}>
-                     Weight
-                  </Button>
-                  <Button
-                     id="button4"
-                     isActive={activeButtonId === "button4"}
-                     onClick={() => handleButtonClick("button4")}>
-                     Weight
-                  </Button>
-                  <Button
-                     id="button5"
-                     isActive={activeButtonId === "button5"}
-                     onClick={() => handleButtonClick("button5")}>
-                     Weight
-                  </Button>
-                  
-               </div>
-            ))}
+               ))}
+            </div>
 
             <Link to="/account" className='default_button'>Back</Link>
          </div>
@@ -161,12 +175,12 @@ const History = () => {
 
 function Button({ id, isActive, onClick, children }) {
    return (
-     <button
-       style={{ backgroundColor: isActive ? '#72236A' : 'gray' }}
-       onClick={onClick}  >
-       {children}
-     </button>
+      <button
+         style={{ backgroundColor: isActive ? '#72236A' : 'gray' }}
+         onClick={onClick}  >
+         {children}
+      </button>
    );
- }
+}
 
 export default History;

@@ -5,16 +5,53 @@ import { Header, Footer, Tracker, Features  } from '../../containers';
 import { Chart } from '../../components';
 import { Outlet, Link } from "react-router-dom";
 
+import axios from 'axios';
+import React, { useState, useEffect } from 'react';
+
 
 const Account = () => {
+  const [receivedUserName, setReceivedUserName] = useState("User");
+  const [userImage, setUserImage] = useState(null);
+  const storedUser = localStorage.getItem('user');
+
+  const getUserName = async () => {
+    try {
+      const response = await axios.get('http://localhost:8800/getuserbyid', { params: { id: storedUser} });
+      console.log(response.data);
+      setReceivedUserName(response.data.userName);
+  
+    } catch (err) {
+      console.log(err)
+    }
+  };
+
+  useEffect(() => {
+    if (storedUser !== "null") {
+      console.log("user logged in");
+      getUserName();
+    } else {
+      console.log("user logged out")
+    }
+  }, [storedUser]);
+
+  useEffect(() => {
+    const storedImageUrl = localStorage.getItem('userImage');
+    if (storedImageUrl) {
+      setUserImage(storedImageUrl);
+    } else {
+      setUserImage(circle);
+    }
+  }, []);
+
+
   return (
     <>
       <h1 className='main_heading'>Account</h1>
       <div className=' section__padding account_header default_font'>
           <div className='account_header_left'>
-            <h2 className="margin_bottom_20">User 123</h2>
+            <h2 className="margin_bottom_20">{receivedUserName}</h2>
             <div className='account_image'>
-              <img src={circle} alt="" />
+              <img src={userImage} alt="" />
             </div>
           </div>
           <div className='account_header_right'>

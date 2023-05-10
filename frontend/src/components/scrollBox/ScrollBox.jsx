@@ -3,6 +3,8 @@ import './scrollBox.css';
 import { useState } from 'react';
 
 const ScrollBox = ({ elements }) => {
+  console.log("hey")
+  console.log(elements)
   if (elements.length === 0 ) {
       return (
         <div className="scroll_section">
@@ -21,9 +23,9 @@ const ScrollBox = ({ elements }) => {
     <div className="scroll_section">
       <ul>
         {elements.map(element => (
-          <li className="scroll_element" key={element.id}>
-            <div className="scroll_element_left">{element.name}</div>
-            <div className="scroll_element_right">{element.number}</div>
+          <li className="scroll_element" key={element.idmeal}>
+            <div className="scroll_element_left">{element.mealName}</div>
+            <div className="scroll_element_right">{element.mealCalories}</div>
           </li>
         ))}
       </ul>

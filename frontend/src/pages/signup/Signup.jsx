@@ -1,4 +1,3 @@
-
 import React, {useState} from 'react';
 import './signup.css';
 
@@ -8,11 +7,13 @@ import google from '../../assets/google_logo.png';
 import test from '../../assets/test_image.jpg';
 import women from '../../assets/women_2.png';
 import image3 from '../../assets/image_3.jpg';
-import { Outlet, Link,  } from "react-router-dom";
+import { Outlet, Link,  useNavigate} from "react-router-dom";
 
 import axios from 'axios';
 
 const Signup = () => {
+
+  
   // const [userName, setUserName] = useState("");
   // const [fullName, setFullName] = useState("");
   // const [email, setEmail] = useState("");
@@ -25,7 +26,7 @@ const Signup = () => {
     "password": "",
   })
 
-
+  let navigate = useNavigate();
   const handlechange = e =>{
     setUser(prev=>({...prev, [e.target.name]: e.target.value}));
   };
@@ -36,54 +37,32 @@ const Signup = () => {
     e.preventDefault();
     console.log(user)
     
+    if (!user.userName || !user.fullName || !user.email || !user.password) {
+      alert("Please fill in all required fields");
+      return;
+    }
+  
+    // Check that the password is at least 8 characters long
+    if (user.password.length < 8) {
+      alert("Password must be at least 8 characters long");
+      return;
+    }
+  
+    // Check that the email address is in a valid format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(user.email)) {
+      alert("Please enter a valid email address");
+      return;
+    }
+
     try {
       await axios.post("http://localhost:8800/setusers", user)
+      navigate("/profile");
     }catch(err){
       console.log(err)
     }
 
-    // if (!userName || !fullName || !email || !password) {
-    //   alert("Please fill in all required fields");
-    //   return;
-    // }
-  
-    // // Check that the password is at least 8 characters long
-    // if (password.length < 8) {
-    //   alert("Password must be at least 8 characters long");
-    //   return;
-    // }
-  
-    // // Check that the email address is in a valid format
-    // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    // if (!emailRegex.test(email)) {
-    //   alert("Please enter a valid email address");
-    //   return;
-    // }
 
-    // // Make a POST request to the server to create a new user account
-    // fetch('/signup', {
-        
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json'
-    //   },
-    //   body: JSON.stringify({
-    //     username: userName,
-    //     fullName: fullName,
-    //     email: email,
-    //     password: password
-    //   })
-    // })
-    // .then(response => {
-    //   console.log(response);
-      
-    //   // TODO: Handle the response as needed (display a success message to the user)
-    // })
-    // .catch(error => {
-    //   console.log(error);
-    //   console.log(userName)
-    //   // TODO: Handle the error as needed ( display an error message to the user)
-    // });
   };
 
   return (

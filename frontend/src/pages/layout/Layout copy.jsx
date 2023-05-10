@@ -12,32 +12,31 @@ const Layout = () => {
 
   const [showChat, setShowChat] = useState(false);
 
-  function toggleChat() {
-    setShowChat(!showChat);
+  function toggleChat()
+  {
+      setShowChat(!showChat);
   }
 
   const storedUser = localStorage.getItem('user');
-  var isUserLoggedIn = false;
 
-  if (storedUser !== "null") {
-    isUserLoggedIn = true;
-  }
-  else {
-    console.log("user logged out")
-  }
+  const isUserLoggedIn = false;
 
+  if(storedUser !== null){
+    console.log(storedUser);
+    isUserLoggedIn(true);
+  }
 
   return (
     <>
       <div className='gradient__bg'>
-        {isUserLoggedIn ? (<NavbarLogged />) : (<Navbar />)}
+          <Navbar />
       </div>
       <div className='chatBot'>
         <button className="chat_button" onClick={toggleChat}
-          style={{ marginBottom: showChat ? 500 : 0 }}>Help</button>
+        style={{ marginBottom: showChat ? 500 : 0 }}>Help</button>
         {showChat && <ChatWindow />}
         <button className="chat_button_mobile" onClick={toggleChat}
-          style={{ marginBottom: showChat ? 500 : 0 }}>?</button>
+        style={{ marginBottom: showChat ? 500 : 0 }}>?</button>
         {showChat && <ChatWindow />}
       </div>
       <Outlet />

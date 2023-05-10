@@ -10,4 +10,7 @@ export {default as UploadProfile} from './uploadProfile/UploadProfile';
 export {default as Search} from './search/Search';
 
 
+export {default as NavbarLogged} from './navbarLogged/NavbarLogged';
+
+
 export {default as Sidenav} from './sidenav/Sidenav';

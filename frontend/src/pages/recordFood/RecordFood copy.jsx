@@ -1,4 +1,4 @@
-import './recordExercise.css';
+import './recordFood.css';
 import feature from '../../assets/feature.png';
 import circle from '../../assets/circle.png';
 import { Header, Footer, Tracker, Features } from '../../containers';
@@ -9,49 +9,28 @@ import plus from '../../assets/plus_icon.png';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-import { useNavigate } from "react-router-dom";
-
-const RecordExercise = () => {
-  const [exercises, setExercises] = useState([]);
+const RecordFood = () => {
+  const [meals, setMeals] = useState([]);
   const [searchInput, setSearchInput] = useState('');
   const [notification, setNotification] = useState(null);
 
-
-  const storedUser = localStorage.getItem('user');
-
   useEffect(() => {
-    const fetchAllExercises = async () => {
+    const fetchAllMeals = async () => {
       try {
-        const res = await axios.get("http://localhost:8800/exercises")
-        setExercises(res.data);
+        const res = await axios.get("http://localhost:8800/meals")
+        setMeals(res.data);
         console.log(res.data);
       }
       catch (err) {
         console.log(err)
       }
     }
-    fetchAllExercises()
+    fetchAllMeals()
   }, [])
 
-
-  const postExerciseHistory = async (exerciseId) => {
-    var userId = Number(storedUser)
-    try {
-      const response = await axios.post('http://localhost:8800/postExerciseHistory', { params: { iduser: userId, idexercise : exerciseId } });
-      console.log(response.data);
-      //setReceivedUserName(response.data.userName);
-  
-    } catch (err) {
-      console.log(err)
-    }
-  };
-
   //code for the notification functionality
-
   const showNotification = (message, duration) => {
-    console.log(message);
-    postExerciseHistory(message.idexercise);
-    setNotification(message.exerciseName);
+    setNotification(message);
     setTimeout(() => {
       setNotification(null);
     }, duration);
@@ -65,7 +44,7 @@ const RecordExercise = () => {
     );
   };
 
-  if (exercises.length === 1) {
+  if (meals.length === 1) {
     return (
       <div className="scroll_section">
         <li className="scroll_element">
@@ -85,18 +64,18 @@ const RecordExercise = () => {
             value={searchInput} />
           <div className="search_scroll_section">
             <ul>
-              {searchInput !== "" && exercises.filter((item) => {
+              {searchInput !== "" && meals.filter((item) => {
                 return searchInput.toLowerCase() === "" ? item :
-                  item.exerciseName.toLowerCase().includes(searchInput);
+                  item.mealName.toLowerCase().includes(searchInput);
               })
                 .map((item) => (
-                  <li className="scroll_element" key={item.idexercise}>
+                  <li className="scroll_element" key={item.id}>
                     <div className="scroll_element_left">
-                      <div>{item.exerciseName}</div>
-                      <div className="calories_text">{item.exerciseCalories} Calories, {item.exerciseDesc}</div>
+                      <div>{item.mealName}</div>
+                      <div className="calories_text">{item.mealCalories} Calories, {item.mealDesc}</div>
                     </div>
                     <div className="scroll_element_right">
-                      <img onClick={() => { showNotification(item, 3000) }} className="plus_icon" src={plus} alt="" />
+                      <img onClick={() => { showNotification(item.mealName, 3000) }} className="plus_icon" src={plus} alt="" />
                     </div>
                   </li>
                 ))}
@@ -109,14 +88,14 @@ const RecordExercise = () => {
         {notification && <Notification message={notification} />}
         <div className="record_scroll_section">
           <ul>
-            {exercises.map(element => (
-              <li className="scroll_element" key={element.idexercise}>
+            {meals.map(element => (
+              <li className="scroll_element" key={element.id}>
                 <div className="scroll_element_left">
-                  <div>{element.exerciseName}</div>
-                  <div className="calories_text">{element.exerciseCalories} Calories, {element.exerciseDesc}</div>
+                  <div>{element.mealName}</div>
+                  <div className="calories_text">{element.mealCalories} Calories, {element.mealDesc}</div>
                 </div>
                 <div className="scroll_element_right">
-                  <img onClick={() => { showNotification(element, 3000) }} className="plus_icon" src={plus} alt="" />
+                  <img onClick={() => { showNotification(element.mealName, 3000) }} className="plus_icon" src={plus} alt="" />
                 </div>
               </li>
             ))}
@@ -131,4 +110,4 @@ const RecordExercise = () => {
   )
 };
 
-export default RecordExercise;
+export default RecordFood;
