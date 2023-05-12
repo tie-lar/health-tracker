@@ -1,5 +1,5 @@
 import './chart.css';
-import { BarChart, Bar, CartesianGrid, XAxis, YAxis, Tooltip, Legend, ReferenceLine } from 'recharts';
+import { BarChart, Bar, CartesianGrid, XAxis, YAxis, Tooltip, Legend, ReferenceLine, ResponsiveContainer } from 'recharts';
 
 import { useState } from 'react';
 
@@ -60,18 +60,20 @@ function Menu() {
 
   return (
     <>
-    <BarChart width={600} height={600} data={data}>
-        <Bar dataKey={activeButtonId === 'button1' ? "Calories" :
-                      activeButtonId === 'button2' ? "Exercises" :
-                      "Weight"} fill="#8884d8" />
-        <XAxis dataKey="day" />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-        <ReferenceLine y={activeButtonId === 'button1' ? 100 :
-                          activeButtonId === 'button2' ? 3 :
-                          66.0} label="Goal" stroke="red" strokeWidth={2} />
-    </BarChart>
+    <ResponsiveContainer width="80%" height={600}>
+      <BarChart  data={data}>
+          <Bar dataKey={activeButtonId === 'button1' ? "Calories" :
+                        activeButtonId === 'button2' ? "Exercises" :
+                        "Weight"} fill="#8884d8" />
+          <XAxis dataKey="day" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <ReferenceLine y={activeButtonId === 'button1' ? 100 :
+                            activeButtonId === 'button2' ? 3 :
+                            66.0} label="Goal" stroke="red" strokeWidth={2} />
+      </BarChart>
+    </ResponsiveContainer>
     <div className='chart_menu'>
       <Button
         id="button1"

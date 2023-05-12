@@ -242,6 +242,24 @@ app.get('/getexercisehistory', (req, res) => {
   );
 });
 
+app.get('/exercisehistory7days', (req, res) => {
+  const { id } = req.query;
+  pool.query(
+    "SELECT exercises.*, exerciseHistory.* FROM test.exerciseHistory JOIN test.exercises ON exercises.idexercise = exerciseHistory.idexercise WHERE iduser = ? AND exerciseHistory.date >= DATE_ADD(NOW(), INTERVAL -7 DAY)",
+    [id],
+    (err, result) => {
+      if (err) {
+        console.error(err);
+        res.status(500).send("Error retrieving exercise history");
+      } else {
+        //console.log(result);
+        res.send(result);
+      }
+    }
+  );
+});
+
+
 
 
 

@@ -109,7 +109,7 @@ const Account = () => {
       </div>
       <div className='section__padding_less account_header default_font'>
         <div className='account_header_left'>
-          <Chart exercises={dailyTotals}/>
+          <Chart elements={dailyTotals}/>
         </div>
         <div className='account_header_right'>
           <h2>Since You Started Your Journey</h2>
