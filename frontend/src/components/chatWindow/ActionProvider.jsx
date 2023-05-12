@@ -54,12 +54,21 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     }
 
 
-	const handleExercise = () => {
+	const handleExercise = () => {   // CHECK THIS PROCESS IS RIGHT
 		const messageArr = [
 			createChatBotMessage(
-				`To track or log your exercise, COMPLETE LATER`
-			)
-		]
+				`To track or log your exercise, first ensure you are logged in
+				to your ontrack account.`
+			),
+            createChatBotMessage(
+                `Next, click the "Dashboard" button at the top of your page.
+                You should be able to see a graph of your exercises from here.
+                If you would like to log a workout, select the option from your
+                dashboard.`
+            ),
+		];
+        messageArr.forEach(botMessage);
+        solvedQuery();
 	}
 
 
@@ -85,11 +94,21 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
 	}
 
 
-    const handleCalorieTracking = () => {
-        const message = createChatBotMessage(
-            'YET TO BE IMPLEMENTED'
-        );
-        botMessage(message);
+    const handleCalorieTracking = () => {   // CHECK THIS PROCESS IS RIGHT
+        const messageArr = [
+            createChatBotMessage(
+                `To track your calories or log a meal, first ensure you are
+                signed in to your ontrack account.`
+            ),
+            createChatBotMessage(
+                `Next, click the "Dashboard" button at the top of your page.
+                You should be able to see a graph of your calories from here.
+                If you would like to log a meal, select the option from your
+                dashboard.`
+            ),
+        ];
+        messageArr.forEach(botMessage);
+        solvedQuery();
     }
 
 
@@ -102,12 +121,8 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
 
 
     const handleRealPerson = () => {
-        // const message = createChatBotMessage(
-        //     `Connecting you to a real person...
-        //     (NOT REALLY I HAVEN'T DONE IT YET)`
-        // );
         const message = createChatBotMessage(
-            `If you wouuld like to talk to one of our support staff, just click
+            `If you would like to talk to one of our support staff, just click
             the "Support" button at the bottom of the page and follow the
             instructions.`
         );
