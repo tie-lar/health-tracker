@@ -1,0 +1,32 @@
+fieldset {
+    margin: 2em 0;
+    padding: 1em 2em;
+    border: solid 1px #ccc;
+    border-radius: 6px;
+    min-width: 200px;
+}
+
+legend {
+    font-size: 1.25em;
+    padding: 0 .25em;
+}
+
+label {
+    display: block;
+    margin-top: 1em;
+}
+
+label:first-of-type {
+    margin-top: 0;
+}
+
+input {
+    border-radius: 5px;
+    padding: .3em 1em;
+}
+
+input[type="submit"] {
+    padding: .3em 1em;
+    border-radius: 6px;
+    font-size: .8em;
+}

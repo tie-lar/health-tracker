@@ -14,3 +14,7 @@ export {default as NavbarLogged} from './navbarLogged/NavbarLogged';
 
 
 export {default as Sidenav} from './sidenav/Sidenav';
+
+
+export {default as GroupInvite} from './email/GroupInvite';
+export {default as DistributeGoal} from './email/DistributeGoal';
